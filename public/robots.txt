@@ -1,0 +1,74 @@
+# Robots.txt for Zain Cura Medical Center
+# https://zaincura.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Allow specific medical service pages
+Allow: /gp-doctor-deira-dubai
+Allow: /lab-tests-dubai
+Allow: /wellness-health-checks-dubai
+Allow: /home-care-dubai
+Allow: /gynecologist-dubai-female-doctor
+Allow: /clinical-dietician-dubai
+Allow: /iv-drip-therapy-dubai-clinic-home
+Allow: /std-testing-dubai-confidential
+Allow: /semen-analysis-dubai-fertility
+Allow: /corporate-wellness-dubai
+
+# Allow information pages
+Allow: /about
+Allow: /contact
+Allow: /faq
+Allow: /location/
+Allow: /book
+Allow: /services
+Allow: /blog
+
+# Allow static assets
+Allow: /images/
+Allow: /_next/static/
+Allow: /brand/
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Disallow search and filter parameters
+Disallow: /*?search=*
+Disallow: /*?filter=*
+Disallow: /*&search=*
+Disallow: /*&filter=*
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://zaincura.com/sitemap.xml
+
+# Special instructions for medical content crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Medical data crawlers
+User-agent: *
+Disallow: /patient-data/
+Disallow: /medical-records/
+Disallow: /confidential/
