@@ -3,8 +3,11 @@
 import { Button } from '@/components/ui/button'
 import { Calendar, MessageCircle, Phone } from 'lucide-react'
 import Link from 'next/link'
+import { useMedicalTracking } from '@/hooks/useMedicalTracking'
 
 export function MobileCTABar() {
+  const { trackBookingAttempt, trackCallClick, trackWhatsApp } = useMedicalTracking()
+
   return (
     <nav
       className="sticky-mobile-cta"
@@ -17,6 +20,7 @@ export function MobileCTABar() {
             size="sm"
             className="w-full min-h-[44px]"
             aria-label="Book medical appointment"
+            onClick={() => trackBookingAttempt(undefined, 'Mobile CTA Bar')}
           >
             <Calendar className="w-4 h-4 mr-1" aria-hidden="true" />
             <span>Book</span>
@@ -29,6 +33,7 @@ export function MobileCTABar() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contact us via WhatsApp at +971-523-011-150"
+          onClick={() => trackWhatsApp('Mobile CTA Bar')}
         >
           <Button
             size="sm"
@@ -44,6 +49,7 @@ export function MobileCTABar() {
           href="tel:+97145703423"
           className="flex-1"
           aria-label="Call clinic at +971-45-703-423"
+          onClick={() => trackCallClick('Main Reception')}
         >
           <Button
             size="sm"

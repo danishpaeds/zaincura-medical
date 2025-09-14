@@ -6,6 +6,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { MobileCTABar } from "@/components/MobileCTABar";
 import { PerformanceMonitor } from "@/components/PerformanceMonitor";
+import { GoogleTagManager, GTMNoscript } from "@/components/GoogleTagManager";
 
 // ✅ PERFORMANCE: Optimized font loading with single font
 const inter = Inter({
@@ -269,6 +270,9 @@ export default function RootLayout({
           }}
         />
 
+        {/* Google Tag Manager */}
+        <GoogleTagManager gtmId="GTM-KF4F5XSX" />
+
         {/* ✅ PERFORMANCE: Preload critical images */}
         <script
           dangerouslySetInnerHTML={{
@@ -312,6 +316,9 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning className="antialiased">
+        {/* Google Tag Manager (noscript) */}
+        <GTMNoscript gtmId="GTM-KF4F5XSX" />
+
         {/* ✅ PERFORMANCE: Critical loading indicator */}
         <script
           dangerouslySetInnerHTML={{

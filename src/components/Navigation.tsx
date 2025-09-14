@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState, useEffect, useRef, memo } from 'react'
 import { Button } from '@/components/ui/button'
 import { Logo } from '@/components/Logo'
+import { useMedicalTracking } from '@/hooks/useMedicalTracking'
 
 // ✅ PERFORMANCE: Import only specific icons to reduce bundle size
 import {
@@ -41,6 +42,7 @@ export const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
+  const { trackBookingAttempt, trackCallClick, trackWhatsApp } = useMedicalTracking()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,7 +107,7 @@ export const Navigation = memo(() => {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-3">
-            <a href="tel:+97145703423">
+            <a href="tel:+97145703423" onClick={() => trackCallClick('Header Navigation')}>
               <Button
                 size="sm"
                 variant="outline"
@@ -120,7 +122,7 @@ export const Navigation = memo(() => {
                 Call
               </Button>
             </a>
-            <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('Header Navigation')}>
               <Button
                 size="sm"
                 variant="outline"
@@ -144,6 +146,7 @@ export const Navigation = memo(() => {
                   hover:scale-105 hover:shadow-lg
                   focus:ring-2 focus:ring-[#4A9D9C] focus:ring-opacity-50
                 "
+                onClick={() => trackBookingAttempt(undefined, 'Header Navigation')}
               >
                 <Calendar className="w-4 h-4 mr-2 transition-transform duration-300 group-hover:rotate-12" />
                 Book Now
@@ -209,7 +212,7 @@ export const Navigation = memo(() => {
 
               {/* Mobile CTAs */}
               <div className="pt-4 border-t border-gray-100 space-y-3 px-4">
-                <Link href="/book" onClick={() => setIsOpen(false)}>
+                <Link href="/book" onClick={() => { setIsOpen(false); trackBookingAttempt(undefined, 'Mobile Navigation') }}>
                   <Button className="
                     w-full bg-[#4A9D9C] hover:bg-[#2D7D7D] text-white border-0
                     transition-all duration-300 ease-in-out
@@ -221,7 +224,7 @@ export const Navigation = memo(() => {
                 </Link>
 
                 <div className="grid grid-cols-2 gap-3">
-                  <a href="tel:+97145703423">
+                  <a href="tel:+97145703423" onClick={() => trackCallClick('Mobile Navigation')}>
                     <Button
                       variant="outline"
                       size="sm"
@@ -234,7 +237,7 @@ export const Navigation = memo(() => {
                       Call
                     </Button>
                   </a>
-                  <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('Mobile Navigation')}>
                     <Button
                       variant="outline"
                       size="sm"
