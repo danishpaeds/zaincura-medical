@@ -10,6 +10,7 @@ const nextConfig = {
 
   // ✅ PERFORMANCE: Enable image optimization
   images: {
+    unoptimized: true, // Required for static export
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 31536000, // 1 year cache
     dangerouslyAllowSVG: true,
@@ -142,70 +143,8 @@ const nextConfig = {
     return config
   },
 
-  // ✅ PERFORMANCE: Enhanced headers for caching and security
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin'
-          },
-        ],
-      },
-      {
-        source: '/brand/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      // Note: Regex-based headers removed due to conflict with output: 'export'
-      // These cache headers will be handled by Netlify's _headers file instead
-    ]
-  },
-
-  // ✅ PERFORMANCE: Redirects optimization
-  async redirects() {
-    return [
-      // Add any permanent redirects here for SEO
-    ]
-  },
-
-  // ✅ PERFORMANCE: Rewrites for better routing
-  async rewrites() {
-    return [
-      // Add any rewrites here if needed
-    ]
-  },
+  // Note: headers(), redirects(), and rewrites() are not compatible with output: 'export'
+  // All headers are handled by netlify.toml and public/_headers instead
 };
 
 module.exports = nextConfig;
