@@ -5,7 +5,6 @@
 [build.environment]
   NODE_VERSION = "18"
   BUN_VERSION = "1.0.0"
-  # Enable Next.js build caching
   NEXT_TELEMETRY_DISABLED = "1"
 
 # Build caching for faster rebuilds
@@ -16,19 +15,6 @@
     ".bun/cache"
   ]
 
-# Remove Next.js plugin for static export
-# [[plugins]]
-#   package = "@netlify/plugin-nextjs"
-
-# Static site redirects for trailing slashes
-[[redirects]]
-  from = "/*"
-  to = "/:splat/"
-  status = 301
-  conditions = {path = "!*.js", path = "!*.css", path = "!*.png", path = "!*.jpg", path = "!*.gif", path = "!*.svg", path = "!*.ico", path = "!*.woff", path = "!*.woff2", path = "!*.ttf", path = "!*.eot", path = "!*.json", path = "!*.xml", path = "!*.txt"}
-
-# Remove dynamic API routes and admin redirects for static export
-
 # Headers for security and performance
 [[headers]]
   for = "/*"
@@ -38,19 +24,13 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-[[headers]]
-  for = "/api/*"
-  [headers.values]
-    Cache-Control = "no-store, no-cache, must-revalidate"
-
-[[headers]]
-  for = "/admin/*"
-  [headers.values]
-    Cache-Control = "no-store, no-cache, must-revalidate"
-    X-Robots-Tag = "noindex, nofollow"
-
 # Cache static assets for better performance
 [[headers]]
   for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/brand/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
