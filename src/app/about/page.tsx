@@ -22,7 +22,6 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { MobileCTABar } from '@/components/MobileCTABar'
-
 export const metadata = {
   title: 'About Zain Cura Medical Center | Healthcare Excellence in Dubai',
   description: 'Learn about Zain Cura Medical Center - Dubai\'s premier healthcare provider offering comprehensive medical services, same-day appointments, and 24/7 home care in Deira.',
@@ -48,7 +47,6 @@ export const metadata = {
     follow: true
   }
 }
-
 const companyValues = [
   {
     icon: Heart,
@@ -71,14 +69,12 @@ const companyValues = [
     description: "Convenient healthcare solutions including same-day appointments, home visits, and 24/7 emergency services."
   }
 ]
-
 const achievements = [
   { icon: Users, number: "5000+", label: "Patients Served" },
   { icon: Star, number: "4.9/5", label: "Patient Rating" },
   { icon: Award, number: "15+", label: "Years Experience" },
   { icon: Home, number: "1000+", label: "Home Visits" }
 ]
-
 const teamMembers = [
   {
     name: "Dr. Ahmed Al-Rashid",
@@ -105,7 +101,6 @@ const teamMembers = [
     languages: "English, Arabic, Urdu"
   }
 ]
-
 const missionVision = [
   {
     icon: Target,
@@ -123,7 +118,6 @@ const missionVision = [
     description: "We are committed to building lasting relationships with our patients, providing transparent pricing, maintaining the highest medical standards, and continuously improving our services based on patient feedback and medical advances."
   }
 ]
-
 const whyChooseUs = [
   {
     title: "DHA Licensed Excellence",
@@ -146,7 +140,6 @@ const whyChooseUs = [
     icon: Home
   }
 ]
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -181,7 +174,6 @@ export default function AboutPage() {
                 </Link>
               </div>
             </div>
-
             <div className="relative">
               <Card className="clinical-card overflow-hidden">
                 <CardContent className="p-0">
@@ -204,7 +196,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Mission, Vision, Commitment */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -216,7 +207,6 @@ export default function AboutPage() {
               Built on principles of excellence, compassion, and innovation in healthcare delivery.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {missionVision.map((item, index) => (
               <Card key={index} className="clinical-card text-center">
@@ -236,7 +226,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Our Values */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -248,7 +237,6 @@ export default function AboutPage() {
               These principles guide everything we do and define how we serve our patients and community.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {companyValues.map((value, index) => (
               <div key={index} className="text-center">
@@ -266,7 +254,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Achievements */}
       <section className="py-16 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -278,7 +265,6 @@ export default function AboutPage() {
               Numbers that reflect our commitment to excellence and the trust our patients place in us.
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
@@ -296,7 +282,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Our Team */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -309,7 +294,6 @@ export default function AboutPage() {
               you with the highest quality healthcare services.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="clinical-card">
@@ -328,7 +312,6 @@ export default function AboutPage() {
                       {member.qualifications}
                     </p>
                   </div>
-
                   <div className="space-y-3 text-sm">
                     <div className="flex items-start space-x-2">
                       <Clock className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
@@ -358,7 +341,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -370,7 +352,6 @@ export default function AboutPage() {
               What sets us apart as Dubai's preferred neighborhood medical center.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {whyChooseUs.map((reason, index) => (
               <Card key={index} className="clinical-card">
@@ -394,7 +375,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Location & Accessibility */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -408,105 +388,95 @@ export default function AboutPage() {
                 making us easily accessible to residents and visitors across Deira and
                 surrounding areas.
               </p>
-
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary mt-1" />
                   <div>
                     <p className="font-semibold text-gray-900">Prime Location</p>
-                    <p className="text-gray-600">Al Ghurair Centre, Al Rigga, Deira - Heart of Dubai</p>
+                    <p className="text-gray-600">Al Ghurair Centre, Al Murraqabat, Deira - Heart of Dubai</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-3">
                   <Users className="w-5 h-5 text-primary mt-1" />
                   <div>
-                    <p className="font-semibold text-gray-900">Metro Access</p>
-                    <p className="text-gray-600">Union Station (5 min) • Al Rigga Station (8 min)</p>
+                    <p className="font-semibold text-gray-900">Easy Access</p>
+                    <p className="text-gray-600">Metro accessible, ample parking, and convenient for both residents and tourists</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-3">
                   <Clock className="w-5 h-5 text-primary mt-1" />
                   <div>
-                    <p className="font-semibold text-gray-900">Extended Hours</p>
-                    <p className="text-gray-600">08:00 - 22:00 Daily • Home Care 24/7</p>
+                    <p className="font-semibold text-gray-900">Operating Hours</p>
+                    <p className="text-gray-600">Open daily 09:00 - 21:00, including weekends and holidays</p>
                   </div>
                 </div>
               </div>
-
-              <Link href="/location/al-ghurair-centre-deira">
-                <Button className="bg-primary hover:bg-primary/90">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  Get Directions
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/location/al-ghurair-centre-deira">
+                  <Button className="bg-primary text-white hover:bg-primary/90">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    View Location Details
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
             </div>
-
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 text-center">
-              <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <MapPin className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Easy to Reach
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Whether you're coming by metro, bus, or car, our central Deira location
-                makes healthcare accessible to everyone in Dubai.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <p className="text-sm font-medium text-gray-900">Free Parking</p>
-                  <p className="text-xs text-gray-600">Al Ghurair Centre</p>
-                </div>
-                <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <p className="text-sm font-medium text-gray-900">Public Transport</p>
-                  <p className="text-xs text-gray-600">Metro & Bus Access</p>
-                </div>
-              </div>
+            <div className="relative">
+              <Card className="clinical-card overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="h-80 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        Visit Us Today
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        Al Ghurair Centre, Al Murraqabat<br />
+                        Deira, Dubai
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        Adjacent to Al Ghurair City Mall<br />
+                        Near Al Rigga Metro Station
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-16 medical-gradient text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Experience Quality Healthcare Today
+            Ready to Experience Quality Healthcare?
           </h2>
-          <p className="text-xl mb-8 text-white/90">
-            Join thousands of satisfied patients who trust Zain Cura for their healthcare needs.
-            Book your appointment and experience the difference.
+          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            Join thousands of satisfied patients who trust Zain Cura Medical Center
+            for their healthcare needs. Book your appointment today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold">
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Appointment
               </Button>
             </Link>
-            <a href="https://wa.me/+971-5X-XXXXXXX" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp Us
-              </Button>
-            </a>
-            <a href="tel:+971-4-XXXXXXX">
+            <Link href="/contact">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now
+                Call Now: +971 4 123 4567
               </Button>
-            </a>
-          </div>
-
-          <div className="mt-8 text-sm text-white/80">
-            <p>Located at Al Ghurair Centre, Deira • Open 08:00 - 22:00 Daily</p>
+            </Link>
           </div>
         </div>
       </section>
-
-      {/* Mobile CTA Bar */}
       <MobileCTABar />
     </div>
   )
