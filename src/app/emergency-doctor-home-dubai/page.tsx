@@ -22,12 +22,12 @@ import Link from 'next/link'
 import { MobileCTABar } from '@/components/MobileCTABar'
 
 export const metadata = {
-  title: 'Emergency Doctor Home Dubai | 24/7 Emergency Home Visit | Urgent Care',
-  description: '24/7 emergency doctor home visits in Dubai. Urgent medical care at your location within 30 minutes. Professional emergency doctors for urgent health conditions across Dubai.',
-  keywords: 'emergency doctor Dubai, urgent doctor home visit Dubai, 24/7 emergency care Dubai, emergency home doctor Dubai, urgent medical care Dubai, emergency GP Dubai',
+  title: 'Urgent Care Doctor Home Dubai | 24/7 Urgent Home Visit | Medical Care',
+  description: '24/7 urgent care doctor home visits in Dubai. Professional medical care at your location within 30 minutes. Qualified doctors for urgent health conditions across Dubai.',
+  keywords: 'urgent care doctor Dubai, urgent doctor home visit Dubai, 24/7 urgent care Dubai, urgent home doctor Dubai, urgent medical care Dubai, urgent GP Dubai',
   openGraph: {
-    title: 'Emergency Doctor Home Dubai | 24/7 Emergency Home Visit | Urgent Care',
-    description: '24/7 emergency doctor home visits in Dubai. Urgent medical care at your location within 30 minutes.',
+    title: 'Urgent Care Doctor Home Dubai | 24/7 Urgent Home Visit | Medical Care',
+    description: '24/7 urgent care doctor home visits in Dubai. Professional medical care at your location within 30 minutes.',
     url: 'https://zaincura.com/emergency-doctor-home-dubai',
     siteName: 'Zain Cura Medical Center',
     images: [
@@ -35,7 +35,7 @@ export const metadata = {
         url: 'https://zaincura.com/images/emergency-doctor-home-dubai.jpg',
         width: 1200,
         height: 630,
-        alt: '24/7 Emergency Doctor Home Service in Dubai'
+        alt: '24/7 Urgent Care Doctor Home Service in Dubai'
       }
     ],
     locale: 'en_AE',
@@ -59,9 +59,9 @@ export const metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'EmergencyService',
-  name: '24/7 Emergency Doctor Home Dubai - Zain Cura Medical',
-  description: '24/7 emergency doctor home visits in Dubai for urgent medical care and emergency situations',
+  '@type': 'MedicalClinic',
+  name: '24/7 Urgent Care Doctor Home Dubai - Zain Cura Medical',
+  description: '24/7 urgent care doctor home visits in Dubai for non-emergency medical care and urgent health conditions',
   url: 'https://zaincura.com/emergency-doctor-home-dubai',
   telephone: '+971-45703423',
   areaServed: {
@@ -72,27 +72,27 @@ const jsonLd = {
   openingHours: 'Mo-Su 00:00-23:59',
   availableService: {
     '@type': 'MedicalTherapy',
-    name: 'Emergency Home Doctor Visit',
-    description: 'Urgent medical care at patient location'
+    name: 'Urgent Care Home Doctor Visit',
+    description: 'Non-emergency urgent medical care at patient location'
   }
 }
 
-const emergencyConditions = [
+const urgentConditions = [
   {
-    category: "High Priority Emergencies",
-    conditions: ["High fever (>39°C)", "Severe chest pain", "Breathing difficulties", "Severe allergic reactions", "Uncontrolled bleeding", "Loss of consciousness"]
+    category: "High Priority Urgent Conditions",
+    conditions: ["High fever (>39°C)", "Severe headaches", "Breathing difficulties", "Severe allergic reactions", "Severe bleeding", "Fainting episodes"]
   },
   {
     category: "Urgent Medical Conditions",
-    conditions: ["Severe abdominal pain", "Severe headaches", "Suspected fractures", "Severe dehydration", "Acute infections", "Severe vomiting"]
+    conditions: ["Severe abdominal pain", "Suspected fractures", "Severe dehydration", "Acute infections", "Severe vomiting", "Severe back pain"]
   },
   {
-    category: "Pediatric Emergencies",
-    conditions: ["High fever in children", "Severe cough/breathing issues", "Dehydration in infants", "Allergic reactions", "Injuries & falls", "Seizures"]
+    category: "Pediatric Urgent Care",
+    conditions: ["High fever in children", "Severe cough/breathing issues", "Dehydration in infants", "Allergic reactions", "Minor injuries & falls", "Persistent vomiting"]
   },
   {
-    category: "Elderly Care Emergencies",
-    conditions: ["Falls & injuries", "Medication reactions", "Blood pressure crisis", "Diabetic emergencies", "Heart palpitations", "Confusion/disorientation"]
+    category: "Elderly Care Urgencies",
+    conditions: ["Falls & injuries", "Medication reactions", "Blood pressure issues", "Diabetic complications", "Heart palpitations", "Confusion/disorientation"]
   }
 ]
 
@@ -100,37 +100,37 @@ const responseFeatures = [
   {
     icon: Zap,
     title: "30-Minute Response",
-    description: "Emergency doctors reach your location within 30 minutes"
+    description: "Doctors reach your location within 30 minutes for urgent care"
   },
   {
     icon: Shield,
     title: "24/7 Availability",
-    description: "Emergency medical care available around the clock"
+    description: "Urgent medical care available around the clock"
   },
   {
     icon: Heart,
-    title: "Life-Saving Equipment",
-    description: "Doctors carry emergency medical equipment and medications"
+    title: "Professional Medical Equipment",
+    description: "Doctors carry necessary medical equipment and medications"
   },
   {
     icon: Phone,
-    title: "Direct Emergency Line",
-    description: "Dedicated emergency contact for immediate response"
+    title: "Direct Contact Line",
+    description: "Dedicated contact for immediate response"
   }
 ]
 
-const emergencyEquipment = [
-  "Emergency medications",
+const medicalEquipment = [
+  "Medications for urgent care",
   "Oxygen supply",
   "Cardiac monitoring",
   "IV fluids & equipment",
-  "Emergency diagnostic tools",
+  "Diagnostic tools",
   "Wound care supplies",
   "Nebulizer for breathing",
   "Blood pressure monitors"
 ]
 
-export default function EmergencyDoctorHomeDubai() {
+export default function UrgentCareDoctorHomeDubai() {
   return (
     <>
       <script
@@ -139,45 +139,64 @@ export default function EmergencyDoctorHomeDubai() {
       />
 
       <div className="min-h-screen bg-white">
+        {/* CRITICAL SAFETY DISCLAIMER */}
+        <section className="bg-red-900 text-white py-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="flex items-center justify-center space-x-2 mb-2">
+                <AlertTriangle className="w-6 h-6 text-yellow-300" />
+                <span className="font-bold text-lg">EMERGENCY MEDICAL DISCLAIMER</span>
+                <AlertTriangle className="w-6 h-6 text-yellow-300" />
+              </div>
+              <p className="text-white/90 font-semibold">
+                ⚠️ FOR LIFE-THREATENING EMERGENCIES, CALL 999 IMMEDIATELY ⚠️
+              </p>
+              <p className="text-white/80 text-sm mt-1">
+                We are NOT an emergency facility. This service provides urgent care for non-life-threatening conditions only.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-red-50 to-orange-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
-              <Badge className="mb-4 bg-red-600 text-white">24/7 Emergency Service</Badge>
+              <Badge className="mb-4 bg-orange-600 text-white">24/7 Urgent Care Service</Badge>
               <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Emergency Doctor Home Dubai | 24/7 Urgent Medical Care
+                Urgent Care Doctor Home Dubai | 24/7 Professional Medical Care
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-                24/7 emergency doctor home visits in Dubai. Professional emergency medical care
-                delivered to your location within 30 minutes. Equipped doctors for urgent health
-                conditions, emergencies, and critical care at home.
+                24/7 urgent care doctor home visits in Dubai. Professional medical care
+                delivered to your location within 30 minutes. Qualified doctors for urgent health
+                conditions and non-emergency care at home.
               </p>
 
               <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
                 <div className="flex items-center justify-center space-x-2 mb-2">
                   <AlertTriangle className="w-5 h-5 text-red-600" />
-                  <span className="font-semibold text-red-900">Medical Emergency? Call Now!</span>
+                  <span className="font-semibold text-red-900">Need Urgent Care? Call 999 for Emergencies First!</span>
                 </div>
                 <p className="text-red-800 text-sm">
-                  30-minute response • Life-saving equipment • All Dubai areas • Insurance accepted
+                  30-minute response • Professional equipment • All Dubai areas • For non-emergency urgent care only
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a href="tel:+97145703423">
-                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white font-semibold">
+                  <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white font-semibold">
                     <Phone className="w-5 h-5 mr-2" />
-                    Call Emergency Line
+                    Call Urgent Care Line
                   </Button>
                 </a>
                 <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white font-semibold">
                     <MessageCircle className="w-5 h-5 mr-2" />
-                    WhatsApp Emergency
+                    WhatsApp Urgent Care
                   </Button>
                 </a>
                 <Link href="/book">
-                  <Button size="lg" variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-semibold">
+                  <Button size="lg" variant="outline" className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold">
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Urgent Visit
                   </Button>
@@ -195,31 +214,31 @@ export default function EmergencyDoctorHomeDubai() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span>Emergency equipment</span>
+                  <span>Professional equipment</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span>All emergencies</span>
+                  <span>Non-emergency care</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Emergency Conditions */}
+        {/* Urgent Care Conditions */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Emergency Conditions We Treat at Home
+                Urgent Conditions We Treat at Home
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our emergency doctors are equipped to handle urgent medical situations at your location
+                Our doctors are equipped to handle urgent medical situations at your location
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {emergencyConditions.map((category, index) => (
+              {urgentConditions.map((category, index) => (
                 <Card key={index} className="clinical-card h-full">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
@@ -228,7 +247,7 @@ export default function EmergencyDoctorHomeDubai() {
                     <div className="space-y-2">
                       {category.conditions.map((condition, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
-                          <AlertTriangle className="w-4 h-4 text-red-600" />
+                          <AlertTriangle className="w-4 h-4 text-orange-600" />
                           <span className="text-sm text-gray-700">{condition}</span>
                         </div>
                       ))}
@@ -239,13 +258,13 @@ export default function EmergencyDoctorHomeDubai() {
             </div>
 
             <div className="text-center mt-8">
-              <p className="text-lg text-red-600 font-semibold mb-4">
-                Don't see your emergency condition? Call us immediately - we handle all medical emergencies!
+              <p className="text-lg text-orange-600 font-semibold mb-4">
+                Don't see your urgent condition? Call us for consultation - we provide urgent care for many medical conditions.
               </p>
               <a href="tel:+97145703423">
-                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
+                <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call Emergency Doctor Now
+                  Call Urgent Care Doctor Now
                 </Button>
               </a>
             </div>
@@ -257,18 +276,18 @@ export default function EmergencyDoctorHomeDubai() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Emergency Response Features
+                Urgent Care Response Features
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Rapid response emergency medical care with professional equipment and experienced doctors
+                Rapid response urgent medical care with professional equipment and experienced doctors
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {responseFeatures.map((feature, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-red-600" />
+                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-orange-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {feature.title}
@@ -282,22 +301,22 @@ export default function EmergencyDoctorHomeDubai() {
           </div>
         </section>
 
-        {/* Emergency Equipment */}
+        {/* Medical Equipment */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Emergency Equipment Our Doctors Carry
+                Medical Equipment Our Doctors Carry
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Fully equipped for emergency medical situations and immediate care
+                Fully equipped for urgent medical situations and immediate care
               </p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {emergencyEquipment.map((equipment, index) => (
-                <div key={index} className="bg-red-50 p-4 rounded-lg text-center">
-                  <Shield className="w-5 h-5 text-red-600 mx-auto mb-2" />
+              {medicalEquipment.map((equipment, index) => (
+                <div key={index} className="bg-orange-50 p-4 rounded-lg text-center">
+                  <Shield className="w-5 h-5 text-orange-600 mx-auto mb-2" />
                   <span className="text-gray-700 text-sm font-medium">{equipment}</span>
                 </div>
               ))}
@@ -306,25 +325,25 @@ export default function EmergencyDoctorHomeDubai() {
             <div className="mt-12 bg-yellow-50 border border-yellow-200 rounded-xl p-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <AlertTriangle className="w-8 h-8 text-yellow-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-yellow-900 mb-4">When to Call Emergency Doctor</h3>
+                <h3 className="text-2xl font-bold text-yellow-900 mb-4">When to Call Urgent Care vs 999</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                   <div>
-                    <h4 className="font-semibold text-yellow-900 mb-3">Call Immediately For:</h4>
+                    <h4 className="font-semibold text-yellow-900 mb-3">Call 999 IMMEDIATELY For:</h4>
                     <ul className="space-y-2 text-yellow-800 text-sm">
                       <li>• Difficulty breathing or shortness of breath</li>
                       <li>• Chest pain or pressure</li>
                       <li>• Severe bleeding that won't stop</li>
                       <li>• Loss of consciousness or fainting</li>
-                      <li>• Severe allergic reactions</li>
+                      <li>• Suspected heart attack or stroke</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-yellow-900 mb-3">Also Emergency:</h4>
+                    <h4 className="font-semibold text-yellow-900 mb-3">Call Us For Urgent Care:</h4>
                     <ul className="space-y-2 text-yellow-800 text-sm">
-                      <li>• High fever with severe symptoms</li>
-                      <li>• Suspected heart attack or stroke</li>
-                      <li>• Severe burns or injuries</li>
-                      <li>• Suspected poisoning</li>
+                      <li>• High fever with symptoms</li>
+                      <li>• Severe headaches or migraines</li>
+                      <li>• Minor cuts and wounds</li>
+                      <li>• Suspected infections</li>
                       <li>• Severe abdominal pain</li>
                     </ul>
                   </div>
@@ -337,7 +356,7 @@ export default function EmergencyDoctorHomeDubai() {
         {/* Related Services */}
         <section className="py-12 bg-gray-50 border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">Related Emergency & Home Care Services</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-6">Related Urgent & Home Care Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <Link href="/home-gp-consultation-dubai">
                 <Button variant="outline" className="w-full border-gray-300 justify-start">
@@ -348,99 +367,99 @@ export default function EmergencyDoctorHomeDubai() {
               <Link href="/pediatric-home-care-dubai">
                 <Button variant="outline" className="w-full border-gray-300 justify-start">
                   <Baby className="w-4 h-4 mr-2" />
-                  Pediatric Emergencies
+                  Pediatric Urgent Care
                 </Button>
               </Link>
               <Link href="/home-blood-collection-dubai">
                 <Button variant="outline" className="w-full border-gray-300 justify-start">
                   <TestTube className="w-4 h-4 mr-2" />
-                  Emergency Lab Tests
+                  Urgent Lab Tests
                 </Button>
               </Link>
               <Link href="/iv-drip-therapy-dubai-clinic-home">
                 <Button variant="outline" className="w-full border-gray-300 justify-start">
                   <Activity className="w-4 h-4 mr-2" />
-                  Emergency IV Therapy
+                  Urgent IV Therapy
                 </Button>
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Emergency Process */}
+        {/* Urgent Care Process */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Emergency Response Process
+                Urgent Care Response Process
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Fast, professional emergency medical response to your location
+                Fast, professional urgent medical response to your location
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">1</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Call Emergency</h3>
-                <p className="text-gray-600">Call our emergency line immediately for urgent medical situations</p>
+                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">1</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Call Urgent Care</h3>
+                <p className="text-gray-600">Call our urgent care line for urgent medical situations</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">2</div>
+                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">2</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Quick Assessment</h3>
-                <p className="text-gray-600">Emergency medical assessment over phone to prioritize response</p>
+                <p className="text-gray-600">Medical assessment over phone to prioritize response</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">3</div>
+                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">3</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Doctor Dispatch</h3>
-                <p className="text-gray-600">Emergency doctor dispatched to your location within 30 minutes</p>
+                <p className="text-gray-600">Doctor dispatched to your location within 30 minutes</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">4</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Emergency Care</h3>
-                <p className="text-gray-600">Immediate medical treatment and stabilization at your location</p>
+                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">4</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Urgent Care</h3>
+                <p className="text-gray-600">Immediate medical treatment and care at your location</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-red-600 text-white">
+        <section className="py-16 bg-orange-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Medical Emergency? Don't Wait!
+              Need Urgent Medical Care? We're Here to Help!
             </h2>
             <p className="text-xl mb-8 text-white/90">
-              24/7 emergency doctor home visits across Dubai. Professional emergency medical care
-              delivered to your location within 30 minutes. Every second counts!
+              24/7 urgent care doctor home visits across Dubai. Professional medical care
+              delivered to your location within 30 minutes. For non-emergency urgent conditions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+97145703423">
-                <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
+                <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call Emergency Line NOW
+                  Call Urgent Care Line NOW
                 </Button>
               </a>
               <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-red-600">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600">
                   <MessageCircle className="w-5 h-5 mr-2" />
-                  WhatsApp Emergency
+                  WhatsApp Urgent Care
                 </Button>
               </a>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-              <div className="flex items-center justify-center space-x-2">
-                <Clock className="w-4 h-4" />
-                <span>30-minute response</span>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-white/80 mt-8">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-white" />
+                <span>Non-emergency care</span>
               </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Shield className="w-4 h-4" />
-                <span>24/7 availability</span>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-white" />
+                <span>Professional care</span>
               </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Heart className="w-4 h-4" />
-                <span>Life-saving care</span>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-white" />
+                <span>Call 999 for emergencies</span>
               </div>
             </div>
           </div>
