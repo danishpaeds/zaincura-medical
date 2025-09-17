@@ -16,6 +16,7 @@ const inter = Inter({
   fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Arial', 'sans-serif'],
   adjustFontFallback: true, // Reduce layout shift
   variable: '--font-inter',
+  weight: ['300', '400', '500', '600', '700'], // Only load needed weights
 });
 
 export const metadata: Metadata = {
@@ -181,6 +182,16 @@ export default function RootLayout({
         <link rel="preload" href="/brand/logo.png" as="image" type="image/png" />
         <link rel="preload" href="/favicon.png" as="image" type="image/png" />
 
+        {/* Preload critical fonts */}
+        <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+
+        {/* Preload critical CSS */}
+        <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
+
+        {/* Early hints for render-critical resources */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="qzbt_PeRPWlYp-OsxNgR5sVUmqe7gnOHeVuimf6_jp0" />
 
@@ -252,10 +263,50 @@ export default function RootLayout({
               right: 0;
               z-index: 50;
             }
+            /* Critical above-the-fold styles */
+            .hero-section {
+              min-height: 60vh;
+              display: flex;
+              align-items: center;
+              background: white;
+            }
+            .hero-title {
+              font-size: 2.5rem;
+              font-weight: 700;
+              line-height: 1.2;
+              color: #111827;
+              margin-bottom: 1rem;
+            }
+            .hero-description {
+              font-size: 1.125rem;
+              color: #6B7280;
+              margin-bottom: 2rem;
+              max-width: 600px;
+            }
+            .cta-button {
+              background: #3b82f6;
+              color: white;
+              padding: 0.75rem 1.5rem;
+              border-radius: 0.5rem;
+              font-weight: 600;
+              display: inline-flex;
+              align-items: center;
+            }
+            /* Service cards critical styles */
+            .services-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1.5rem;
+              margin-top: 3rem;
+            }
             @media (min-width: 768px) {
-              .mobile-cta-placeholder {
-                display: none;
-              }
+              .hero-title { font-size: 3rem; }
+              .services-grid { grid-template-columns: repeat(2, 1fr); }
+              .mobile-cta-placeholder { display: none; }
+            }
+            @media (min-width: 1024px) {
+              .hero-title { font-size: 3.5rem; }
+              .services-grid { grid-template-columns: repeat(3, 1fr); }
             }
           `
         }} />
@@ -276,15 +327,29 @@ export default function RootLayout({
         {/* Google Tag Manager */}
         <GoogleTagManager gtmId="GTM-KF4F5XSX" />
 
-        {/* Google Analytics (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BVW33FDV5G"></script>
+        {/* Google Analytics (gtag.js) - Deferred for performance */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-BVW33FDV5G"
+          onLoad="window.gtag_loaded = true"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-BVW33FDV5G');
+              // Defer GA initialization
+              function initGA() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-BVW33FDV5G');
+              }
+
+              // Initialize GA after page load
+              if (document.readyState === 'complete') {
+                initGA();
+              } else {
+                window.addEventListener('load', initGA);
+              }
             `,
           }}
         />
@@ -399,17 +464,17 @@ export default function RootLayout({
         {/* ✅ PERFORMANCE: Performance monitoring */}
         <PerformanceMonitor />
 
-        {/* ✅ PERFORMANCE: Service Worker Registration */}
+        {/* ✅ PERFORMANCE: Service Worker Registration - Deferred */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              if ('serviceWorker' in navigator && 'caches' in window) {
-                window.addEventListener('load', () => {
+              // Defer all performance monitoring until after LCP
+              function initPerformanceFeatures() {
+                // Service Worker registration
+                if ('serviceWorker' in navigator && 'caches' in window) {
                   navigator.serviceWorker.register('/sw.js')
                     .then(registration => {
                       console.log('SW registered: ', registration);
-
-                      // Check for updates
                       registration.addEventListener('updatefound', () => {
                         const newWorker = registration.installing;
                         if (newWorker) {
@@ -424,26 +489,33 @@ export default function RootLayout({
                     .catch(registrationError => {
                       console.log('SW registration failed: ', registrationError);
                     });
-                });
-              }
+                }
 
-              // Performance observer for real user monitoring
-              if ('PerformanceObserver' in window) {
-                // Monitor resource loading
-                const observer = new PerformanceObserver((list) => {
-                  for (const entry of list.getEntries()) {
-                    if (entry.duration > 2000) {
-                      console.warn('Slow resource detected:', entry.name, entry.duration + 'ms');
+                // Performance observer (deferred)
+                if ('PerformanceObserver' in window) {
+                  const observer = new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                      if (entry.duration > 2000) {
+                        console.warn('Slow resource detected:', entry.name, entry.duration + 'ms');
+                      }
                     }
-                  }
-                });
+                  });
 
-                try {
-                  observer.observe({ entryTypes: ['resource'] });
-                } catch (e) {
-                  console.warn('Performance observer not supported');
+                  try {
+                    observer.observe({ entryTypes: ['resource'] });
+                  } catch (e) {
+                    console.warn('Performance observer not supported');
+                  }
                 }
               }
+
+              // Initialize performance features after LCP (3s delay minimum)
+              setTimeout(initPerformanceFeatures, 3000);
+
+              // Also initialize on user interaction
+              ['click', 'scroll', 'keydown'].forEach(event => {
+                document.addEventListener(event, initPerformanceFeatures, { once: true, passive: true });
+              });
             `
           }}
         />
