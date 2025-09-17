@@ -20,7 +20,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "GP, Lab & Home Care | Zain Cura – Al Ghurair, Deira",
-  description: "Same-day GP & lab, wellness checks with smart reports, STD testing, IV drips, and home & hotel visits in Deira/Al Rigga. Cash-friendly. Book now.",
+  description: "Same-day GP & lab, wellness checks with smart reports, STD testing, IV drips, and home & hotel visits in Al Murraqabat, Deira. Cash-friendly. Book now.",
   keywords: "GP clinic Dubai, Deira medical center, home doctor Dubai, lab tests Dubai, STD testing Dubai, IV drip therapy Dubai, Al Ghurair medical center",
   authors: [{ name: "Zain Cura Medical Center" }],
   viewport: "width=device-width, initial-scale=1",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "GP, Lab & Home Care | Zain Cura – Al Ghurair, Deira",
-    description: "Same-day GP & lab, wellness checks with smart reports, STD testing, IV drips, and home & hotel visits in Deira/Al Rigga. Cash-friendly. Book now.",
+    description: "Same-day GP & lab, wellness checks with smart reports, STD testing, IV drips, and home & hotel visits in Al Murraqabat, Deira. Cash-friendly. Book now.",
     url: "https://www.zaincura.com",
     siteName: "Zain Cura Medical Center",
     locale: "en_AE",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "GP, Lab & Home Care | Zain Cura – Al Ghurair, Deira",
-    description: "Same-day GP & lab, wellness checks with smart reports, STD testing, IV drips, and home & hotel visits in Deira/Al Rigga. Cash-friendly. Book now."
+    description: "Same-day GP & lab, wellness checks with smart reports, STD testing, IV drips, and home & hotel visits in Al Murraqabat, Deira. Cash-friendly. Book now."
   },
   alternates: {
     canonical: 'https://www.zaincura.com'
@@ -181,6 +181,9 @@ export default function RootLayout({
         <link rel="preload" href="/brand/logo.png" as="image" type="image/png" />
         <link rel="preload" href="/favicon.png" as="image" type="image/png" />
 
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="qzbt_PeRPWlYp-OsxNgR5sVUmqe7gnOHeVuimf6_jp0" />
+
         {/* ✅ PERFORMANCE: DNS prefetch for external domains */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -272,6 +275,19 @@ export default function RootLayout({
 
         {/* Google Tag Manager */}
         <GoogleTagManager gtmId="GTM-KF4F5XSX" />
+
+        {/* Google Analytics (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BVW33FDV5G"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BVW33FDV5G');
+            `,
+          }}
+        />
 
         {/* ✅ PERFORMANCE: Preload critical images */}
         <script
