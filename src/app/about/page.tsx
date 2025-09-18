@@ -24,11 +24,11 @@ import Link from 'next/link'
 import { MobileCTABar } from '@/components/MobileCTABar'
 export const metadata = {
   title: 'About Zain Cura Medical Center | Healthcare Excellence in Dubai',
-  description: 'Learn about Zain Cura Medical Center - Dubai\'s premier healthcare provider offering comprehensive medical services, same-day appointments, and 24/7 home care in Deira.',
+  description: 'Dubai\'s premier medical center in Deira. Comprehensive healthcare, same-day appointments & 24/7 home care at Al Ghurair Centre.',
   keywords: 'about Zain Cura, medical center Dubai, healthcare Deira, medical services Dubai, Al Ghurair medical center',
   openGraph: {
     title: 'About Zain Cura Medical Center | Healthcare Excellence in Dubai',
-    description: 'Premier medical center in Deira, Dubai offering comprehensive healthcare services with experienced doctors and modern facilities.',
+    description: 'Premier medical center in Deira with experienced doctors and modern facilities for comprehensive healthcare.',
     url: 'https://www.zaincura.com/about',
     siteName: 'Zain Cura Medical Center',
     locale: 'en_AE',

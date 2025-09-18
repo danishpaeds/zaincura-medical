@@ -20,7 +20,7 @@ import { MobileCTABar } from '@/components/MobileCTABar'
 
 export const metadata = {
   title: 'Weight Management Dubai | Clinical Dietician Guide | Healthy Weight Loss',
-  description: 'Expert weight management guide from our clinical dietician in Dubai. Learn sustainable weight loss strategies, meal planning, and professional nutrition support at Al Ghurair Centre.',
+  description: 'Expert weight management in Dubai. Sustainable weight loss strategies, meal planning & nutrition support with clinical dietician.',
   keywords: 'weight management Dubai, weight loss Dubai, clinical dietician Dubai, nutrition consultation Dubai, meal planning Dubai, healthy weight loss',
   openGraph: {
     title: 'Weight Management Dubai | Clinical Dietician Expert Guide',

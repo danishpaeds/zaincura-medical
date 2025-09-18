@@ -36,11 +36,11 @@ import { MobileCTABar } from '@/components/MobileCTABar'
 
 export const metadata = {
   title: 'Clinical Dietician Dubai | Professional Nutrition Consultations | Weight Management',
-  description: 'Professional clinical dietician in Dubai. Weight management, therapeutic diets, meal planning, nutrition consultations. DHA licensed nutritionist at Al Ghurair Centre, Deira.',
+  description: 'Clinical dietician in Dubai for weight management, therapeutic diets & nutrition consultations. DHA licensed at Al Ghurair Centre.',
   keywords: 'clinical dietician Dubai, nutritionist Dubai, weight management Dubai, therapeutic diet Dubai, meal planning Dubai, nutrition consultation Dubai, dietician Deira',
   openGraph: {
     title: 'Clinical Dietician Dubai | Professional Nutrition & Weight Management',
-    description: 'Expert nutrition consultations with clinical dietician in Dubai. Weight management, therapeutic diets, meal planning for optimal health.',
+    description: 'Expert nutrition consultations in Dubai. Weight management, therapeutic diets & meal planning for optimal health.',
     url: 'https://zaincura.com/clinical-dietician-dubai',
     siteName: 'Zain Cura Medical Center',
     images: [

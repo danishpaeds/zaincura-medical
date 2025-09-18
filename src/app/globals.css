@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fix for invisible white outline buttons */
+[class*="border-white"][class*="text-white"] {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+[class*="border-white"][class*="text-white"]:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

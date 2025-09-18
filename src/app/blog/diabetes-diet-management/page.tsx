@@ -21,7 +21,7 @@ import { MobileCTABar } from '@/components/MobileCTABar'
 
 export const metadata = {
   title: 'Diabetes Diet Management Dubai | Clinical Dietician Guide | Blood Sugar Control',
-  description: 'Expert diabetes diet management from our clinical dietician in Dubai. Learn blood sugar control, carbohydrate counting, and diabetic meal planning at Al Ghurair Centre.',
+  description: 'Expert diabetes diet management in Dubai. Blood sugar control, carb counting & meal planning with clinical dietician.',
   keywords: 'diabetes diet Dubai, diabetic nutrition Dubai, blood sugar control Dubai, clinical dietician diabetes, carbohydrate counting Dubai, diabetic meal plan',
   openGraph: {
     title: 'Diabetes Diet Management Dubai | Clinical Dietician Expert Guide',

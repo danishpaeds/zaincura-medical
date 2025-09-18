@@ -54,7 +54,7 @@ const blogPosts = [
     category: "Wellness",
     icon: Heart,
     featured: true,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 2,
@@ -66,7 +66,7 @@ const blogPosts = [
     category: "Sexual Health",
     icon: Shield,
     featured: false,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 3,
@@ -78,7 +78,7 @@ const blogPosts = [
     category: "Women's Health",
     icon: Heart,
     featured: false,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 4,
@@ -90,7 +90,7 @@ const blogPosts = [
     category: "Nutrition",
     icon: Apple,
     featured: true,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 5,
@@ -102,7 +102,7 @@ const blogPosts = [
     category: "Nutrition",
     icon: Apple,
     featured: false,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 6,
@@ -114,7 +114,7 @@ const blogPosts = [
     category: "Nutrition",
     icon: Apple,
     featured: false,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 7,
@@ -126,7 +126,7 @@ const blogPosts = [
     category: "Nutrition",
     icon: Apple,
     featured: false,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1544384380-6e0d4f7b8aba?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 8,
@@ -138,7 +138,7 @@ const blogPosts = [
     category: "Nutrition",
     icon: Apple,
     featured: false,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 9,
@@ -150,7 +150,7 @@ const blogPosts = [
     category: "Laboratory",
     icon: TestTube,
     featured: false,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 10,
@@ -162,7 +162,7 @@ const blogPosts = [
     category: "Nutrition",
     icon: Apple,
     featured: false,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1609501676725-7186f05ba4b8?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 11,
@@ -174,7 +174,7 @@ const blogPosts = [
     category: "Home Care",
     icon: Stethoscope,
     featured: false,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&auto=format"
   },
   {
     id: 12,
@@ -186,7 +186,7 @@ const blogPosts = [
     category: "Wellness",
     icon: Heart,
     featured: false,
-    image: "/api/placeholder/400/250"
+    image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=250&fit=crop&auto=format"
   }
 ]
 
