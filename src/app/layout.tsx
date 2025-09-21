@@ -331,7 +331,7 @@ export default function RootLayout({
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-BVW33FDV5G"
-          onLoad="window.gtag_loaded = true"
+          onLoad={() => { (window as any).gtag_loaded = true }}
         ></script>
         <script
           dangerouslySetInnerHTML={{
