@@ -29,7 +29,7 @@ import { Breadcrumb, BreadcrumbConfigs } from '@/components/Breadcrumb'
 
 export const metadata = {
   title: 'Medical Services Dubai | GP, Lab Tests, Specialists | Zain Cura Medical',
-  description: 'Comprehensive medical services Dubai. GP consultations, lab tests, specialist care, home visits. Cash-friendly healthcare at Al Ghurair Deira.',
+  description: 'Medical services Dubai. GP consultations, lab tests, home doctor visits. DHA licensed healthcare at Al Ghurair Centre, Deira.',
   keywords: 'medical services Dubai, healthcare Dubai, doctor Dubai, lab tests Dubai, medical center Dubai, clinic Dubai',
   openGraph: {
     title: 'Medical Services Dubai | Complete Healthcare Solutions',

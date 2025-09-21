@@ -25,7 +25,7 @@ import { MobileCTABar } from '@/components/MobileCTABar'
 
 export const metadata = {
   title: 'Wellness Health Checks Dubai | Comprehensive Health Screening | Smart Reports',
-  description: 'Complete wellness health checks Dubai. 40+ biomarkers, same-day results, smart reports. Executive & preventive health packages available.',
+  description: 'Wellness health checks Dubai with smart reports. 40+ biomarkers, same-day results. Executive & preventive packages from AED 499.',
   keywords: 'wellness health check Dubai, executive health checkup Dubai, preventive health screening Dubai, smart health reports Dubai, comprehensive medical checkup Dubai, annual health check Dubai',
   openGraph: {
     title: 'Wellness Health Checks Dubai | Comprehensive Health Screening | Smart Reports',

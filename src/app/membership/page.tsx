@@ -33,7 +33,7 @@ import { MobileCTABar } from '@/components/MobileCTABar'
 
 export const metadata = {
   title: 'VIP Healthcare Membership Dubai | Gold & Silver Plans | Zain Cura Medical',
-  description: 'VIP Healthcare Membership Dubai. Gold & Silver plans with priority appointments, home care, wellness checks. Join today for exclusive benefits.',
+  description: 'VIP Healthcare Membership Dubai. Gold & Silver plans with priority appointments, home care, wellness checks. Save up to AED 2,801/year.',
   keywords: 'VIP healthcare membership Dubai, medical membership plans, priority healthcare Dubai, exclusive medical services, healthcare membership benefits Dubai',
   openGraph: {
     title: 'VIP Healthcare Membership Dubai | Exclusive Medical Care Plans',
