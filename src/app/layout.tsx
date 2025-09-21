@@ -24,7 +24,6 @@ export const metadata: Metadata = {
   description: "Same-day GP & lab, wellness checks with smart reports, STD testing, IV drips, and home & hotel visits in Al Murraqabat, Deira. Cash-friendly. Book now.",
   keywords: "GP clinic Dubai, Deira medical center, home doctor Dubai, lab tests Dubai, STD testing Dubai, IV drip therapy Dubai, Al Ghurair medical center",
   authors: [{ name: "Zain Cura Medical Center" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   icons: {
     icon: [
@@ -52,6 +51,13 @@ export const metadata: Metadata = {
     canonical: 'https://www.zaincura.com'
   }
 };
+
+export function generateViewport() {
+  return {
+    width: "device-width",
+    initialScale: 1,
+  }
+}
 
 // Site-wide Organization and WebSite Schema
 const organizationSchema = {
@@ -216,7 +222,6 @@ export default function RootLayout({
         <link rel="prefetch" href="/book/" />
 
         {/* ✅ PERFORMANCE: Resource hints for better loading */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="format-detection" content="telephone=yes" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -331,7 +336,6 @@ export default function RootLayout({
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-BVW33FDV5G"
-          onLoad={() => { (window as any).gtag_loaded = true }}
         ></script>
         <script
           dangerouslySetInnerHTML={{
