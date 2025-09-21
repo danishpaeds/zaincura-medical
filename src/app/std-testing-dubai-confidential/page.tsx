@@ -2,6 +2,13 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
+
+import {
   Shield,
   Lock,
   TestTube,
@@ -15,15 +22,17 @@ import {
   Heart,
   Users,
   MapPin,
-  Star
+  Star,
+  ChevronDown
 } from 'lucide-react'
 import Link from 'next/link'
 import { MobileCTABar } from '@/components/MobileCTABar'
+import { useState } from 'react'
 
 export const metadata = {
   title: 'STD Testing Dubai | 100% Confidential | Same-Day Results | Home Collection',
   description: 'Confidential STD testing in Dubai with complete privacy. Same-day results, home collection available. Professional, discreet sexual health screening at Zain Cura Medical Center.',
-  keywords: 'STD testing Dubai, confidential STD test Dubai, sexual health screening Dubai, private STD testing, anonymous STD test Dubai, home STD collection Dubai',
+  keywords: 'STD testing Dubai, confidential STD test Dubai, sexual health screening Dubai, private STD testing, anonymous STD test Dubai, home STD collection Dubai, STD clinic Dubai, STD center Dubai, full panel STD test, 10 panel STD test, quick STD test, sexual health check up, STD blood test, STD check up',
   openGraph: {
     title: 'STD Testing Dubai | 100% Confidential | Same-Day Results',
     description: 'Professional confidential STD testing in Dubai. Complete privacy guaranteed, same-day results, home collection available. Trusted sexual health screening.',
@@ -198,22 +207,66 @@ const whyChooseUs = [
   }
 ]
 
-const faqItems = [
+const enhancedFaqItems = [
   {
-    question: 'Is STD testing completely confidential?',
-    answer: 'Yes, we guarantee 100% confidentiality. Your test results are shared only with you through secure channels. We never share information with anyone without your explicit consent.'
+    question: 'Where can I find an STD clinic near me in Dubai?',
+    answer: 'Zain Cura Medical Center operates a confidential <strong>STD clinic</strong> located in Al Ghurair Centre, Deira, Dubai. Our <strong>STD center</strong> provides complete privacy with discrete entrances and private consultation rooms. We offer both in-clinic testing and home collection services throughout Dubai, making us easily accessible for anyone seeking professional STD testing services.'
   },
   {
-    question: 'How quickly can I get STD test results?',
-    answer: 'Most STD tests provide results within 24-48 hours. We deliver results securely via WhatsApp or encrypted email for complete privacy.'
+    question: 'What does a full panel STD test include?',
+    answer: 'Our comprehensive <strong>full panel STD test</strong> includes screening for HIV 1&2, Hepatitis B & C, Syphilis, Chlamydia, Gonorrhea, and Herpes 1&2. This <strong>full STD test</strong> covers all major sexually transmitted infections and provides you with complete peace of mind about your sexual health status.'
   },
   {
-    question: 'Do you offer home collection for STD testing?',
-    answer: 'Yes, we provide discreet home collection service across Dubai. Our certified phlebotomists visit your location for complete privacy and convenience.'
+    question: 'How much does a 10 panel STD test cost in Dubai?',
+    answer: 'Our <strong>10 panel STD test</strong> is competitively priced and includes comprehensive screening for the most common STDs. The cost varies depending on specific tests included and whether you choose clinic or home collection. Contact us directly for current pricing and available insurance coverage options.'
   },
   {
-    question: 'What STDs do you test for?',
-    answer: 'We test for all common STDs including HIV, Hepatitis B&C, Syphilis, Chlamydia, Gonorrhea, and Herpes. Comprehensive panels and individual tests available.'
+    question: 'Can I get a quick STD test with same-day results?',
+    answer: 'Yes, we offer <strong>quick STD test</strong> options with most results available within 24-48 hours. Some rapid screening tests can provide preliminary results on the same day. Our laboratory uses advanced testing methods to ensure both speed and accuracy without compromising reliability.'
+  },
+  {
+    question: 'What is included in a sexual health check up?',
+    answer: 'Our comprehensive <strong>sexual health check up</strong> includes a full STD panel, consultation with qualified healthcare professionals, health history review, and personalized advice for maintaining sexual health. We ensure complete confidentiality and provide detailed explanations of all test results.'
+  },
+  {
+    question: 'Where can I test for STDs near me without judgment?',
+    answer: 'At Zain Cura Medical Center, you can <strong>test STD near me</strong> in a completely judgment-free environment. Our healthcare professionals provide compassionate, confidential care with no questions asked. We understand the sensitive nature of STD testing and ensure every patient feels comfortable and respected.'
+  },
+  {
+    question: 'What types of STD blood tests do you offer?',
+    answer: 'We offer comprehensive <strong>STD blood test</strong> panels including HIV antibody and antigen tests, Hepatitis B & C screening, Syphilis serology, and Herpes 1&2 antibody testing. All blood tests are performed in our certified laboratory with results delivered securely and confidentially.'
+  },
+  {
+    question: 'How often should I get an STD check up?',
+    answer: 'The frequency of <strong>STD check up</strong> depends on your sexual activity and risk factors. Generally, sexually active individuals should get tested annually, while those with multiple partners or high-risk behaviors may need more frequent testing. Our healthcare providers can recommend the appropriate testing schedule for your situation.'
+  },
+  {
+    question: 'Is there an STD center near me that offers home collection?',
+    answer: 'Yes, our <strong>STD center near me</strong> provides convenient home collection services throughout Dubai. Our certified phlebotomists visit your location for sample collection, ensuring complete privacy and eliminating the need to visit our clinic. This service is available 7 days a week.'
+  },
+  {
+    question: 'What makes your STD clinic different from others?',
+    answer: 'Our <strong>STD clinic</strong> prioritizes absolute confidentiality, offering private consultation rooms, discrete scheduling, and secure result delivery. We provide same-day appointments, home collection services, and have DHA-licensed healthcare professionals who specialize in sexual health with a non-judgmental approach.'
+  },
+  {
+    question: 'Can I get a full STD test anonymously?',
+    answer: 'Yes, we offer anonymous <strong>full STD test</strong> options where you can use a code instead of personal details. Your privacy is completely protected, and results are delivered through secure channels of your choice. No personal information is shared with anyone without your explicit consent.'
+  },
+  {
+    question: 'Where can I do an STD check near me in Deira?',
+    answer: 'You can do an <strong>STD check near me</strong> at our Zain Cura Medical Center located in Al Ghurair Centre, Deira. We are conveniently located in the heart of Deira with easy access via metro and parking facilities. Our Deira location offers complete privacy and professional STD testing services.'
+  },
+  {
+    question: 'Do you provide STD testing with complete confidentiality?',
+    answer: 'Absolutely. Our <strong>STD check</strong> services guarantee 100% confidentiality. All patient information is protected under strict medical privacy laws. Results are shared only with you through secure channels, and no information is disclosed to third parties without your written consent.'
+  },
+  {
+    question: 'What should I expect during my STD testing appointment?',
+    answer: 'During your <strong>STD testing</strong> appointment, you will have a private consultation to discuss your health history and testing needs. Sample collection is quick and professional, typically involving blood draw and/or urine sample. The entire process is designed to be comfortable, discrete, and efficient.'
+  },
+  {
+    question: 'Can couples get STD testing together?',
+    answer: 'Yes, we welcome couples for <strong>STD testing</strong> and offer joint consultations if desired. Many couples choose to get tested together for peace of mind and mutual health assurance. We can schedule same-day appointments and provide couple-friendly counseling about sexual health and prevention.'
   }
 ]
 
@@ -427,31 +480,57 @@ export default function STDTestingDubaiPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Enhanced FAQ Section with Interactive Accordion */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Frequently Asked Questions
+                Frequently Asked Questions About STD Testing
               </h2>
               <p className="text-lg text-gray-600">
-                Common questions about our confidential STD testing service.
+                Common questions about our confidential STD testing service in Dubai.
               </p>
             </div>
 
-            <div className="space-y-6">
-              {faqItems.map((item, index) => (
-                <Card key={index} className="clinical-card">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            <div className="space-y-4">
+              <Accordion type="single" collapsible className="w-full">
+                {enhancedFaqItems.map((item, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg mb-4 bg-white">
+                    <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-red-700 px-6 py-4 hover:no-underline">
                       {item.question}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {item.answer}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-700 px-6 pb-4 leading-relaxed">
+                      <div dangerouslySetInnerHTML={{ __html: item.answer }} />
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+
+            {/* FAQ CTA */}
+            <div className="text-center mt-12">
+              <div className="bg-red-50 border border-red-200 rounded-lg p-6 max-w-2xl mx-auto">
+                <h3 className="text-xl font-bold text-red-900 mb-3">
+                  Still Have Questions About STD Testing?
+                </h3>
+                <p className="text-red-800 mb-4">
+                  Our healthcare professionals are ready to answer any questions about our confidential STD testing services.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-green-600 hover:bg-green-700 text-white">
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Ask via WhatsApp
+                    </Button>
+                  </a>
+                  <a href="tel:+97145703423">
+                    <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call for Info
+                    </Button>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
