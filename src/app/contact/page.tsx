@@ -49,10 +49,52 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
     setError('')
+
     try {
-      // Simulate form submission - replace with actual API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      // For now, we'll show success and reset form
+      // Create WhatsApp message with contact form data
+      const whatsappMessage = `📞 *NEW CONTACT INQUIRY* 📞
+
+👤 *Contact Details:*
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.phone}
+
+📋 *Inquiry Details:*
+Subject: ${formData.subject}
+Service Type: ${formData.serviceType}
+Urgency: ${formData.urgency.toUpperCase()}
+Preferred Contact: ${formData.preferredContact.toUpperCase()}
+
+💬 *Message:*
+${formData.message}
+
+⏰ *Submitted:* ${new Date().toLocaleString('en-AE', { timeZone: 'Asia/Dubai' })}
+
+Please respond to this inquiry. Thank you! 🙏`
+
+      // Encode message for WhatsApp URL
+      const encodedMessage = encodeURIComponent(whatsappMessage)
+      const whatsappURL = `https://wa.me/971523011150?text=${encodedMessage}`
+
+      // Track form submission for analytics
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'contact_form_submitted', {
+          event_category: 'Contact',
+          form_type: 'Contact Inquiry',
+          service_type: formData.serviceType,
+          urgency: formData.urgency,
+          preferred_contact: formData.preferredContact,
+          value: 1
+        })
+      }
+
+      // Short delay for better UX
+      await new Promise(resolve => setTimeout(resolve, 1000))
+
+      // Open WhatsApp with pre-filled message
+      window.open(whatsappURL, '_blank')
+
+      // Show success and reset form
       setIsSubmitted(true)
       setFormData({
         firstName: '',

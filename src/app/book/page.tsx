@@ -47,9 +47,70 @@ export default function BookPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
+
+    // Create WhatsApp message with all form data
+    const whatsappMessage = `🏥 *NEW APPOINTMENT REQUEST* 🏥
+
+👤 *Patient Details:*
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+
+🩺 *Appointment Details:*
+Service: ${formData.service}
+Location: ${formData.location}
+Date: ${formData.preferredDate}
+Time: ${formData.preferredTime}
+
+📍 *Address:* ${formData.address || 'Clinic Visit'}
+
+📝 *Notes:* ${formData.notes || 'None'}
+
+⏰ *Submitted:* ${new Date().toLocaleString('en-AE', { timeZone: 'Asia/Dubai' })}
+
+Please confirm this appointment. Thank you! 🙏`
+
+    // Encode message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(whatsappMessage)
+    const whatsappURL = `https://wa.me/971523011150?text=${encodedMessage}`
+
+    // Detect if user is on mobile or desktop
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+
+    // Track form submission for analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'appointment_booking_submitted', {
+        event_category: 'Medical Services',
+        service_type: formData.service,
+        location_type: formData.location,
+        preferred_date: formData.preferredDate,
+        device_type: isMobile ? 'mobile' : 'desktop',
+        value: 1
+      })
+    }
+
+    // Open WhatsApp with pre-filled message
+    window.open(whatsappURL, '_blank')
+
+    // Show success message
     setIsSubmitted(true)
+
+    // Optional: Clear form after submission
+    setTimeout(() => {
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        service: '',
+        location: '',
+        address: '',
+        preferredDate: '',
+        preferredTime: '',
+        notes: '',
+        gclid: '',
+        gbraid: ''
+      })
+    }, 3000)
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -66,11 +127,11 @@ export default function BookPage() {
                 <CheckCircle className="w-8 h-8 text-green-600" />
               </div>
               <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Appointment Request Received!
+                WhatsApp Message Sent Successfully! 📱
               </h1>
               <p className="text-lg text-gray-600 mb-6">
-                Thank you for choosing Zain Cura Medical Center. We'll contact you within 30 minutes
-                to confirm your appointment details.
+                Your appointment request has been sent directly to our WhatsApp. We'll confirm your appointment within 30 minutes.
+                Check your WhatsApp for our response!
               </p>
               <div className="space-y-4">
                 <p className="text-sm text-gray-500">

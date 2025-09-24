@@ -66,7 +66,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MessageCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                <a href="https://wa.me/+971-5X-XXXXXXX" className="text-sm text-gray-600 hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/971523011150" className="text-sm text-gray-600 hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">
                   WhatsApp: +971-523011150
                 </a>
               </div>
@@ -99,7 +99,7 @@ export function Footer() {
                   Book Appointment
                 </Button>
               </Link>
-              <a href="https://wa.me/+971-5X-XXXXXXX" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white justify-start md:my-[10px] md:py-[15px]">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp Us
