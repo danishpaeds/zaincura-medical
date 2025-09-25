@@ -17,7 +17,8 @@ import {
   Eye,
   Heart,
   FileText,
-  AlertCircle
+  AlertCircle,
+  FileCheck
 } from 'lucide-react'
 import Link from 'next/link'
 import { MobileCTABar } from '@/components/MobileCTABar'
@@ -248,15 +249,45 @@ export default function STDTestingPage() {
                 Complete sexual health screening with absolute privacy. Same-day results,
                 comprehensive STI panels, and expert care at Al Ghurair Centre, Deira.
               </p>
+
+              {/* HIPAA Compliance Badge */}
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <Shield className="w-5 h-5 text-blue-600" />
+                  <span className="font-semibold text-blue-900">HIPAA Compliant • Protected Health Information</span>
+                </div>
+                <p className="text-blue-800 text-sm text-center">
+                  Your privacy is protected by federal law. <Link href="/privacy" className="underline">Read our Privacy Policy</Link> • <Link href="/hipaa-notice" className="underline">HIPAA Notice</Link>
+                </p>
+              </div>
+
+              {/* Enhanced Privacy Messaging */}
+              <div className="bg-green-50/20 border border-green-200/50 rounded-lg p-4 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                  <div className="flex items-center justify-center space-x-2">
+                    <Lock className="w-4 h-4 text-green-200" />
+                    <span className="text-sm font-medium text-green-100">HIPAA Protected</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <Shield className="w-4 h-4 text-green-200" />
+                    <span className="text-sm font-medium text-green-100">Encrypted Data</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <FileCheck className="w-4 h-4 text-green-200" />
+                    <span className="text-sm font-medium text-green-100">Secure Results</span>
+                  </div>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/book">
-                  <Button size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold w-full sm:w-auto">
+                  <Button size="lg" className="bg-white text-[#4A9D9C] hover:bg-gray-100 hover:text-[#4A9D9C] font-semibold w-full sm:w-auto transition-all">
                     <Calendar className="w-5 h-5 mr-2" />
                     Book Confidential Test
                   </Button>
                 </Link>
                 <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#4A9D9C] w-full sm:w-auto transition-all">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     WhatsApp Privately
                   </Button>
@@ -293,6 +324,47 @@ export default function STDTestingPage() {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Medical Disclaimer Section */}
+      <section className="py-8 bg-yellow-50 border-t border-b border-yellow-200">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h3 className="font-semibold text-yellow-900 mb-2">Important Medical Information</h3>
+          <p className="text-yellow-800 text-sm">
+            This website provides general information only. Always consult with healthcare professionals for medical advice.
+            Testing services are provided by DHA-licensed medical professionals.
+            <Link href="/medical-disclaimer" className="underline ml-1">Full Medical Disclaimer</Link>
+          </p>
+        </div>
+      </section>
+
+      {/* Credentials Section */}
+      <section className="py-8 bg-blue-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h3 className="text-xl font-bold text-center mb-6">Licensed & Certified Healthcare</h3>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <Award className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+              <p className="font-medium">DHA Licensed</p>
+              <p className="text-sm text-gray-600">Dubai Health Authority</p>
+            </div>
+            <div>
+              <Shield className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+              <p className="font-medium">ISO Certified Lab</p>
+              <p className="text-sm text-gray-600">International Standards</p>
+            </div>
+            <div>
+              <Lock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+              <p className="font-medium">HIPAA Compliant</p>
+              <p className="text-sm text-gray-600">Privacy Protected</p>
+            </div>
+            <div>
+              <FileCheck className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+              <p className="font-medium">Accredited Tests</p>
+              <p className="text-sm text-gray-600">Quality Assured</p>
             </div>
           </div>
         </div>
@@ -405,13 +477,13 @@ export default function STDTestingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold w-full sm:w-auto">
+              <Button size="lg" className="bg-white text-[#4A9D9C] hover:bg-gray-100 hover:text-[#4A9D9C] font-semibold w-full sm:w-auto transition-all">
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Private Test
               </Button>
             </Link>
             <a href="tel:+971523011150">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#4A9D9C] w-full sm:w-auto transition-all">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </Button>

@@ -287,7 +287,7 @@ export default function FAQPage() {
                 </Button>
               </a>
               <a href="tel:+97145703423">
-                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                <Button size="lg" variant="outline" className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                   <Phone className="w-5 h-5 mr-2" />
                   Call Us
                 </Button>
@@ -456,7 +456,7 @@ export default function FAQPage() {
                       id="phone"
                       name="phone"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                      placeholder="+971-XX-XXXXXXX"
+                      placeholder="+971-50-XXX-XXXX"
                     />
                   </div>
                   <div>
@@ -592,7 +592,7 @@ export default function FAQPage() {
                       <Button
                         type="button"
                         variant="outline"
-                        className="border-primary text-primary hover:bg-primary hover:text-white"
+                        className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white"
                       >
                         <Phone className="w-4 h-4 mr-2" />
                         Call
@@ -621,13 +621,13 @@ export default function FAQPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-[#4A9D9C] hover:bg-gray-100 hover:text-[#4A9D9C]">
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Appointment
               </Button>
             </Link>
             <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#4A9D9C]">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp for Urgent Care
               </Button>

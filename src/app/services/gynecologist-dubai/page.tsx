@@ -49,13 +49,13 @@ export default function GynecologistPage() {
                   Book Consultation
                 </Button>
               </Link>
-              <a href="https://wa.me/+971-5X-XXXXXXX" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp for Enquiry
                 </Button>
               </a>
-              <a href="tel:+971-4-XXXXXXX">
+              <a href="tel:+971-45703423">
                 <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
                   <Phone className="w-5 h-5 mr-2" />
                   Call
@@ -130,13 +130,13 @@ export default function GynecologistPage() {
           <p className="text-xl mb-8 text-white/90">Confidential care for women’s health, from routine checkups to prenatal care.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-[#4A9D9C] hover:bg-gray-100 hover:text-[#4A9D9C]">
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Appointment
               </Button>
             </Link>
-            <a href="https://wa.me/+971-5X-XXXXXXX" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#4A9D9C]">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp for Enquiry
               </Button>

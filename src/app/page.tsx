@@ -418,7 +418,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link href="/faq">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+              <Button variant="outline" className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                 View All FAQs
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>

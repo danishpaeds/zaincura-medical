@@ -167,7 +167,7 @@ Please respond to this inquiry. Thank you! 🙏`
                   Al Murraqabat, Deira, Dubai, UAE
                 </p>
                 <Link href="/location/al-ghurair-centre-deira">
-                  <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white">
+                  <Button variant="outline" size="sm" className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                     Get Directions
                   </Button>
                 </Link>
@@ -186,7 +186,7 @@ Please respond to this inquiry. Thank you! 🙏`
                   Same-day appointments
                 </p>
                 <a href="tel:+97145703423">
-                  <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white">
+                  <Button variant="outline" size="sm" className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                     Call Now
                   </Button>
                 </a>
@@ -205,7 +205,7 @@ Please respond to this inquiry. Thank you! 🙏`
                   Emergency: Anytime
                 </p>
                 <Link href="/book">
-                  <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white">
+                  <Button variant="outline" size="sm" className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                     Book Appointment
                   </Button>
                 </Link>
@@ -298,7 +298,7 @@ Please respond to this inquiry. Thank you! 🙏`
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                      placeholder="+971-XX-XXXXXXX"
+                      placeholder="+971-50-XXX-XXXX"
                     />
                   </div>
                 </div>

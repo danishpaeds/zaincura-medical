@@ -152,6 +152,76 @@ export default function PrivacyPolicyPage() {
               </CardContent>
             </Card>
 
+            {/* HIPAA Compliance Section */}
+            <Card className="clinical-card border-blue-200">
+              <CardContent className="p-8">
+                <div className="flex items-start space-x-3 mb-4">
+                  <Shield className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                  <h2 className="text-2xl font-bold text-blue-900">HIPAA Compliance & Protected Health Information</h2>
+                </div>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                  <h3 className="font-semibold text-blue-900 mb-3">Your Health Information is Protected</h3>
+                  <p className="text-blue-800 mb-4">
+                    We follow HIPAA (Health Insurance Portability and Accountability Act) principles to protect your
+                    Protected Health Information (PHI). Your medical information is confidential and will only be used
+                    for authorized purposes.
+                  </p>
+                </div>
+
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Permitted Uses of Your Health Information</h3>
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-medium text-gray-900">Treatment</h4>
+                      <p className="text-gray-600 text-sm">Providing medical care, coordinating with specialists, and managing your health</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-medium text-gray-900">Payment</h4>
+                      <p className="text-gray-600 text-sm">Processing insurance claims, billing activities, and payment verification</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-medium text-gray-900">Healthcare Operations</h4>
+                      <p className="text-gray-600 text-sm">Quality improvement, staff training, and ensuring proper medical care delivery</p>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Your Rights Under HIPAA Principles</h3>
+                <ul className="list-disc pl-6 text-gray-600 space-y-1 mb-4">
+                  <li>Right to access and review your medical records</li>
+                  <li>Right to request corrections to your health information</li>
+                  <li>Right to restrict certain uses and disclosures</li>
+                  <li>Right to request confidential communications</li>
+                  <li>Right to file a complaint about privacy practices</li>
+                  <li>Right to receive an accounting of disclosures</li>
+                </ul>
+
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Security Measures</h4>
+                  <p className="text-gray-700 text-sm">
+                    We implement physical, technical, and administrative safeguards to protect your health information
+                    from unauthorized access, use, or disclosure. This includes encrypted data storage, secure facility
+                    access controls, and trained staff who understand confidentiality requirements.
+                  </p>
+                </div>
+
+                <div className="mt-6 text-center">
+                  <Link href="/hipaa-notice" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                    <FileText className="w-4 h-4 mr-2" />
+                    Read Full HIPAA Notice of Privacy Practices
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Information We Collect */}
             <Card className="clinical-card">
               <CardContent className="p-8">
@@ -416,13 +486,13 @@ export default function PrivacyPolicyPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-[#4A9D9C] hover:bg-gray-100 hover:text-[#4A9D9C]">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contact Privacy Officer
               </Button>
             </Link>
             <a href="tel:+97145703423">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#4A9D9C]">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Directly
               </Button>

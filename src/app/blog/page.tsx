@@ -382,7 +382,7 @@ export default function BlogPage() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
             />
-            <Button className="bg-white text-primary hover:bg-gray-100 font-semibold">
+            <Button className="bg-white text-[#4A9D9C] hover:bg-gray-100 hover:text-[#4A9D9C] font-semibold">
               Subscribe
             </Button>
           </div>
@@ -409,7 +409,7 @@ export default function BlogPage() {
               </Button>
             </Link>
             <a href="tel:+97145703423">
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+              <Button size="lg" variant="outline" className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Clinic
               </Button>

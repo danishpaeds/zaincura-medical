@@ -207,13 +207,13 @@ export default function WellnessChecksPage() {
                   Book Wellness Check
                 </Button>
               </Link>
-              <a href="https://wa.me/+971-5X-XXXXXXX" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp
                 </Button>
               </a>
-              <a href="tel:+971-4-XXXXXXX">
+              <a href="tel:+971-45703423">
                 <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
                   <Phone className="w-5 h-5 mr-2" />
                   Call
@@ -508,7 +508,7 @@ export default function WellnessChecksPage() {
                 Book Wellness Check
               </Button>
             </Link>
-            <a href="tel:+971-4-XXXXXXX">
+            <a href="tel:+971-45703423">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
@@ -517,7 +517,7 @@ export default function WellnessChecksPage() {
           </div>
 
           <div className="mt-8 text-sm text-white/80">
-            <p>Wellness Center: 08:00 - 22:00 Daily • Same-day results available</p>
+            <p>Wellness Center: 09:00 - 21:00 Daily • Same-day results available</p>
           </div>
         </div>
       </section>

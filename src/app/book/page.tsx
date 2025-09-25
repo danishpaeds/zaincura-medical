@@ -138,14 +138,14 @@ Please confirm this appointment. Thank you! 🙏`
                   For immediate assistance, you can also:
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="https://wa.me/+971-5X-XXXXXXX" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white">
                       <MessageCircle className="w-4 h-4 mr-2" />
                       WhatsApp Us
                     </Button>
                   </a>
-                  <a href="tel:+971-4-XXXXXXX">
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                  <a href="tel:+971-45703423">
+                    <Button variant="outline" className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                       <Phone className="w-4 h-4 mr-2" />
                       Call Now
                     </Button>
@@ -389,15 +389,15 @@ Please confirm this appointment. Thank you! 🙏`
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-6 space-y-4">
-                <a href="https://wa.me/+971-5X-XXXXXXX" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/971523011150" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     WhatsApp Now
                   </Button>
                 </a>
 
-                <a href="tel:+971-4-XXXXXXX">
-                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
+                <a href="tel:+971-45703423">
+                  <Button variant="outline" className="w-full border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                     <Phone className="w-4 h-4 mr-2" />
                     Call Direct
                   </Button>
@@ -406,7 +406,7 @@ Please confirm this appointment. Thank you! 🙏`
                 <div className="text-sm text-gray-600 space-y-2">
                   <p>
                     <strong>Clinic Hours:</strong><br />
-                    09:00 - 22:00 Daily
+                    09:00 - 21:00 Daily
                   </p>
                   <p>
                     <strong>Home Care:</strong><br />

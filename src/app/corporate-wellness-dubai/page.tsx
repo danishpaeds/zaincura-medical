@@ -153,7 +153,7 @@ export default function CorporateWellnessDubai() {
                 </Button>
               </a>
               <a href="tel:+97145703423">
-                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                <Button size="lg" variant="outline" className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                   <Phone className="w-5 h-5 mr-2" />
                   Speak to Wellness Expert
                 </Button>

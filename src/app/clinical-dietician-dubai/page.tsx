@@ -97,7 +97,7 @@ const jsonLd = {
     latitude: 25.2630,
     longitude: 55.3117
   },
-  openingHours: 'Mo-Su 08:00-22:00',
+  openingHours: 'Mo-Su 09:00-21:00',
   medicalSpecialty: ['Clinical Nutrition', 'Dietetics', 'Weight Management', 'Therapeutic Nutrition'],
   availableService: [
     {
@@ -529,7 +529,7 @@ export default function ClinicalDieticianDubai() {
 
             <div className="text-center mt-12">
               <Link href="/services">
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                <Button variant="outline" className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                   View All Medical Services
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -892,7 +892,7 @@ export default function ClinicalDieticianDubai() {
 
             <div className="text-center mt-12">
               <Link href="/services">
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                <Button variant="outline" className="border-[#4A9D9C] text-[#4A9D9C] hover:bg-primary hover:text-white">
                   View All Medical Services
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>

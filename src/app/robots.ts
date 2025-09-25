@@ -16,8 +16,8 @@ export default function robots(): MetadataRoute.Robots {
           '/private/',
           '/*.json$',
           '/uploads/',
-          '/patient-records/', // Medical privacy protection
-          '/internal/',       // Internal medical data protection
+          '/patient-records/',
+          '/internal/',
         ],
       },
       {
@@ -27,10 +27,10 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
           '/api/',
           '/uploads/',
-          '/patient-records/', // HIPAA compliance for medical privacy
-          '/internal/',       // Internal medical data protection
+          '/patient-records/',
+          '/internal/',
         ],
-        crawlDelay: 1, // Respectful crawling for medical content
+        crawlDelay: 1, // Respectful crawling for medical site
       },
       {
         userAgent: 'Bingbot',
@@ -39,10 +39,10 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
           '/api/',
           '/uploads/',
-          '/patient-records/', // HIPAA compliance for medical privacy
-          '/internal/',       // Internal medical data protection
+          '/patient-records/',
+          '/internal/',
         ],
-        crawlDelay: 1, // Respectful crawling for healthcare content
+        crawlDelay: 1,
       },
     ],
     sitemap: 'https://www.zaincura.com/sitemap.xml',
