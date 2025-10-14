@@ -1,0 +1,273 @@
+# WordPress to Next.js URL Redirects for zaincura.com
+# These redirects handle old WordPress URLs and redirect them to appropriate new pages
+
+# Core Pages
+/contact-us/                    /contact                   301
+/our-services/                  /services                  301
+/about-us/                      /about                     301
+/faqs/                          /faq                       301
+/home/                          /                          301
+/home-1/                        /                          301
+/make-appointment               /book                      301
+/make-appointment/              /book                      301
+/appointment                    /book                      301
+/appointment/                   /book                      301
+/booking                        /book                      301
+/booking/                       /book                      301
+
+# Customer & User Management
+/customer-cabinet/              /book                      301
+/my-account/                    /book                      301
+/account/                       /book                      301
+
+# Medical Services - Gynecology
+/gynaecology/                   /gynecologist-dubai-female-doctor   301
+/service/gynaecologist/         /gynecologist-dubai-female-doctor   301
+/product-category/gynecology/   /gynecologist-dubai-female-doctor   301
+/product-category/gynecologist/ /gynecologist-dubai-female-doctor   301
+/gynecologist/                  /gynecologist-dubai-female-doctor   301
+/gyneco/                        /gynecologist-dubai-female-doctor   301
+/women-health/                  /gynecologist-dubai-female-doctor   301
+/womens-health/                 /gynecologist-dubai-female-doctor   301
+
+# Medical Services - Laboratory & Testing
+/service/laboratory-services-in-al-ghurair-center/  /lab-tests-dubai-home-collection  301
+/product-category/blood-test-lab-test/              /lab-tests-dubai-home-collection  301
+/lab/                           /lab-tests-dubai-home-collection  301
+/labs/                          /lab-tests-dubai-home-collection  301
+/laboratory/                    /lab-tests-dubai-home-collection  301
+/blood-test/                    /lab-tests-dubai-home-collection  301
+/blood-tests/                   /lab-tests-dubai-home-collection  301
+/pathology/                     /lab-tests-dubai-home-collection  301
+/diagnostics/                   /lab-tests-dubai-home-collection  301
+
+# STD Testing redirects
+/std/                           /std-testing-dubai-confidential   301
+/std-test/                      /std-testing-dubai-confidential   301
+/std-tests/                     /std-testing-dubai-confidential   301
+/std-testing/                   /std-testing-dubai-confidential   301
+/sexual-health/                 /std-testing-dubai-confidential   301
+/sti/                           /std-testing-dubai-confidential   301
+/sti-test/                      /std-testing-dubai-confidential   301
+/sti-tests/                     /std-testing-dubai-confidential   301
+/sti-testing/                   /std-testing-dubai-confidential   301
+
+# IV Drip & Wellness
+/iv-drip/                       /iv-drip-therapy-dubai-clinic-home 301
+/iv-therapy/                    /iv-drip-therapy-dubai-clinic-home 301
+/drip-therapy/                  /iv-drip-therapy-dubai-clinic-home 301
+/vitamin-drip/                  /iv-drip-therapy-dubai-clinic-home 301
+/wellness/                      /wellness-health-checks-dubai      301
+/health-check/                  /wellness-health-checks-dubai      301
+/health-checks/                 /wellness-health-checks-dubai      301
+/annual-checkup/                /wellness-health-checks-dubai      301
+/executive-health/              /wellness-health-checks-dubai      301
+
+# IV Drip Sub-Pages
+/anti-stress-iv/                /iv-drip-therapy-dubai-clinic-home/anti-stress-antioxidant 301
+/stress-relief-drip/            /iv-drip-therapy-dubai-clinic-home/anti-stress-antioxidant 301
+/antioxidant-drip/              /iv-drip-therapy-dubai-clinic-home/anti-stress-antioxidant 301
+/immune-drip/                   /iv-drip-therapy-dubai-clinic-home/immune-boost-hydration 301
+/immunity-boost/                /iv-drip-therapy-dubai-clinic-home/immune-boost-hydration 301
+/hydration-iv/                  /iv-drip-therapy-dubai-clinic-home/immune-boost-hydration 301
+/energy-drip/                   /iv-drip-therapy-dubai-clinic-home/energy-boost-fitness-support 301
+/fitness-iv/                    /iv-drip-therapy-dubai-clinic-home/energy-boost-fitness-support 301
+/nad-therapy/                   /iv-drip-therapy-dubai-clinic-home/energy-boost-fitness-support 301
+/hair-growth-iv/                /iv-drip-therapy-dubai-clinic-home/hair-loss-support 301
+/biotin-drip/                   /iv-drip-therapy-dubai-clinic-home/hair-loss-support 301
+/gut-health-iv/                 /iv-drip-therapy-dubai-clinic-home/gut-support 301
+/digestive-wellness-drip/       /iv-drip-therapy-dubai-clinic-home/gut-support 301
+
+# Home Care Services
+/home-visit/                    /home-doctor-dubai-24-7            301
+/home-visits/                   /home-doctor-dubai-24-7            301
+/doctor-home/                   /home-doctor-dubai-24-7            301
+/home-consultation/             /home-gp-consultation-dubai        301
+/home-doctor/                   /home-doctor-dubai-24-7            301
+/mobile-doctor/                 /home-doctor-dubai-24-7            301
+/home-nursing/                  /nurse-on-call-dubai               301
+/nursing-care/                  /nurse-on-call-dubai               301
+/pediatrics/                    /pediatric-home-care-dubai         301
+/child-care/                    /pediatric-home-care-dubai         301
+/emergency/                     /emergency-doctor-home-dubai       301
+/urgent-care/                   /emergency-doctor-home-dubai       301
+
+# Specialized Services
+/dietician/                     /clinical-dietician-dubai          301
+/nutritionist/                  /clinical-dietician-dubai          301
+/diet-plan/                     /clinical-dietician-dubai          301
+/nutrition/                     /clinical-dietician-dubai          301
+/genetic-test/                  /genetic-testing-dubai             301
+/genetics/                      /genetic-testing-dubai             301
+/microbiome/                    /microbiome-testing-dubai          301
+/gut-health/                    /microbiome-testing-dubai          301
+/fertility/                     /semen-analysis-dubai-fertility    301
+/fertility-test/                /semen-analysis-dubai-fertility    301
+/semen-test/                    /semen-analysis-dubai-fertility    301
+/male-fertility/                /semen-analysis-dubai-fertility    301
+
+# Medical Services - General
+/service/urologist/             /services                  301
+/service/                       /services                  301
+/vhome-health-care/             /home-care                 301
+
+# Doctor Pages
+/doctor/dr-sami-osman/          /services                  301
+/doctor/dr-gavin-bernard/       /services                  301
+/doctor/dr-olivia-addison/      /services                  301
+/doctor/                        /services                  301
+/doctor/page/2/                 /services                  301
+/our-doctor/                    /services                  301
+/doctors/                       /services                  301
+/physicians/                    /services                  301
+/staff/                         /services                  301
+
+# Specialized Services
+/industries/expert-clinical-dietitian-dubai-ms-munira-hasanali/  /clinical-dietician-dubai  301
+/case-studies/pediatrics-care/  /pediatric-home-care-dubai        301
+
+# Business Pages
+/career/                        /contact                   301
+/careers/                       /contact                   301
+/jobs/                          /contact                   301
+/testimonials/                  /                          301
+/reviews/                       /                          301
+/case-studies-3/                /services                  301
+/case-studies/                  /services                  301
+
+# Product Categories
+/product-category/psychology/   /services                  301
+/product-tag/trading/           /services                  301
+/product-tag/analysis/          /services                  301
+/product/nuderm-exfoderm-forte/ /services                  301
+/category/dental-care/          /services                  301
+/product/                       /services                  301
+/products/                      /services                  301
+/shop/                          /services                  301
+
+# Location & Directory
+/location/                      /location/al-ghurair-centre-deira  301
+/locations/                     /location/al-ghurair-centre-deira  301
+/clinic/                        /location/al-ghurair-centre-deira  301
+/clinics/                       /location/al-ghurair-centre-deira  301
+/deira/                         /location/al-ghurair-centre-deira  301
+/al-ghurair/                    /location/al-ghurair-centre-deira  301
+/find-us/                       /location/al-ghurair-centre-deira  301
+/directions/                    /location/al-ghurair-centre-deira  301
+/industries/                    /services                  301
+/industries/dr-sami-osman/      /services                  301
+/zain-cura-medical-center-llc-clinic-near-me/  /           301
+
+# Search & Listing
+/search-home/                   /                          301
+/search/                        /                          301
+/add-listing/                   /contact                   301
+/page/2/                        /                          301
+/page/3/                        /                          301
+/page/*/                        /                          301
+/single-tag/                    /                          301
+/tag/data/                      /                          301
+/tag/                           /                          301
+/tags/                          /                          301
+
+# Blog related redirects
+/news/                          /blog                      301
+/articles/                      /blog                      301
+/posts/                         /blog                      301
+/blog/page/2/                   /blog                      301
+/blog/page/*/                   /blog                      301
+
+# Payment & Transaction Pages
+/payment-receipt-2/             /                          301
+/transaction-failure-2/         /                          301
+/payment/                       /book                      301
+/invoice/                       /                          301
+/receipt/                       /                          301
+
+# Common medical service variations
+/gp/                            /gp-doctor-deira-dubai    301
+/general-practitioner/          /gp-doctor-deira-dubai    301
+/family-doctor/                 /gp-doctor-deira-dubai    301
+/primary-care/                  /gp-doctor-deira-dubai    301
+
+# Corporate services
+/corporate/                     /corporate-wellness-dubai  301
+/business/                      /corporate-wellness-dubai  301
+/company/                       /corporate-wellness-dubai  301
+/employee-health/               /corporate-wellness-dubai  301
+
+# Membership and packages
+/packages/                      /membership                301
+/plans/                         /membership                301
+/pricing/                       /membership                301
+
+# Common 404 patterns
+/index.php                      /                          301
+/index.html                     /                          301
+/main                           /                          301
+/main/                          /                          301
+/default                        /                          301
+/default/                       /                          301
+
+# KiviCare System URLs (old patient management system)
+/kivicaremail/kivicare_patient_invoice/                     /  301
+/kivicaresms/kivicare_add_doctor_zoom_link/                 /  301
+/kivicaresms/kivicare_zoom_link/                            /  301
+/kivicaresms/kivicare_cancel_appointment/                   /  301
+/kivicaresms/kivicare_meet_link/                            /  301
+/kivicaresms/kivicare_book_appointment_reminder/            /  301
+/kivicaresms/kivicare_book_appointment_reminder_for_doctor/ /  301
+/kivicaresms/kivicare_receptionist_register/                /  301
+/kivicaresms/kivicare_payment_pending/                      /  301
+/kivicaresms/kivicare_patient_register/                     /  301
+/Kivicaregoogleevent/kivicare_default_event_template/       /  301
+
+# Template & System URLs
+/pxl-template/header-home-2/    /                          301
+/pxl-template/header-home-5/    /                          301
+/pxl-template/footer-home-1/    /                          301
+/pxl-template/header-home-4/    /                          301
+/pxl-template/header-home-3/    /                          301
+/pxl-template/header-main/      /                          301
+/pxl-template/footer-main/      /                          301
+/pxl-template/tab-post-2/       /                          301
+/pxl-template/tab-mission/      /                          301
+/pxl-template/tab-post-1/       /                          301
+/pxl-template/tab-post-3/       /                          301
+/pxl-template/tab-vr3/          /                          301
+/pxl-template/mega-menu/        /                          301
+/pxl-template/tab-vr2/          /                          301
+/pxl-template/tab-vr1/          /                          301
+
+# WordPress admin and system files
+/wp-admin/                      /                          301
+/wp-login.php                   /                          301
+/wp-config.php                  /                          301
+/wp-includes/                   /                          301
+/wp-content/                    /                          301
+/xmlrpc.php                     /                          301
+/wp-json/                       /                          301
+
+# Common file requests
+/favicon.ico                    /favicon.ico               200
+/sitemap.xml                    /sitemap.xml               200
+/robots.txt                     /robots.txt                200
+
+# Malformed URLs (from error logs)
+/)),b&&b[1])return             /                          301
+
+# Catch-all for any remaining old WordPress patterns
+/wp-*                          /                          301
+/wordpress*                    /                          301
+/*wp-content*                  /                          301
+/*wp-includes*                 /                          301
+/*wp-admin*                    /                          301
+
+# General catch-all patterns for common 404s
+/*php                          /                          301
+/*cgi                          /                          301
+/*asp                          /                          301
+/*aspx                         /                          301
+
+# Yandex verification file (add this to prevent redirect)
+/yandex_e542f27b239a0e5a.html  /yandex_e542f27b239a0e5a.html  200
