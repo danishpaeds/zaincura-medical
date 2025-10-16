@@ -46,7 +46,7 @@ export const metadata = {
 const blogPosts = [
   {
     id: 1,
-    title: "Complete Guide to Wellness Health Checks in Dubai",
+    title: "Complete Guide to Wellness Health Checks in UAE",
     excerpt: "Learn why regular wellness checks are essential for maintaining optimal health and preventing diseases. Our smart health reports make understanding your results easier than ever.",
     author: "Dr. Sarah Ahmed",
     date: "December 10, 2024",
