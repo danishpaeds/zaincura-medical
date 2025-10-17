@@ -10,12 +10,12 @@ import {
   ArrowRight,
   Stethoscope,
   Heart,
-  Shield,
-  TestTube,
-  Apple
+  // Removed other icons as they are not in the JSON data
 } from 'lucide-react'
 import Link from 'next/link'
 import { MobileCTABar } from '@/components/MobileCTABar'
+// ✅ IMPORT required function to load posts
+import { getAllBlogPosts } from '@/lib/blog'
 
 export const metadata = {
   title: 'Health Blog | Medical Tips & Wellness Advice | Zain Cura Medical',
@@ -43,152 +43,7 @@ export const metadata = {
   }
 }
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Complete Guide to Wellness Health Checks in UAE",
-    excerpt: "Learn why regular wellness checks are essential for maintaining optimal health and preventing diseases. Our smart health reports make understanding your results easier than ever.",
-    author: "Dr. Sarah Ahmed",
-    date: "December 10, 2024",
-    readTime: "5 min read",
-    category: "Wellness",
-    icon: Heart,
-    featured: true,
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 2,
-    title: "Understanding STD Testing: A Private and Confidential Guide",
-    excerpt: "Everything you need to know about sexual health testing. We ensure 100% confidentiality and provide same-day results in a private, comfortable environment.",
-    author: "Dr. Ahmed Hassan",
-    date: "December 8, 2024",
-    readTime: "7 min read",
-    category: "Sexual Health",
-    icon: Shield,
-    featured: false,
-    image: "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 3,
-    title: "Women's Health: When to See a Gynecologist",
-    excerpt: "Our female gynecologist explains the importance of regular women's health checkups, from routine screenings to prenatal care and hormonal health.",
-    author: "Dr. Fatima Al-Zahra",
-    date: "December 5, 2024",
-    readTime: "6 min read",
-    category: "Women's Health",
-    icon: Heart,
-    featured: false,
-    image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 4,
-    title: "Weight Management in Dubai: A Clinical Dietician's Guide",
-    excerpt: "Expert nutrition advice for healthy weight loss and management. Learn about sustainable dietary changes, meal planning, and professional nutrition support available in Dubai.",
-    author: "Dr. Nourhan Saleh - Clinical Dietician",
-    date: "December 12, 2024",
-    readTime: "8 min read",
-    category: "Nutrition",
-    icon: Apple,
-    featured: true,
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 5,
-    title: "Diabetes Diet Management: Foods to Eat and Avoid",
-    excerpt: "Comprehensive guide to managing diabetes through nutrition. Learn about blood sugar control, carbohydrate counting, and creating a balanced diabetic meal plan.",
-    author: "Dr. Nourhan Saleh - Clinical Dietician",
-    date: "December 10, 2024",
-    readTime: "10 min read",
-    category: "Nutrition",
-    icon: Apple,
-    featured: false,
-    image: "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 6,
-    title: "PCOS and Nutrition: Dietary Solutions for Hormonal Balance",
-    excerpt: "How proper nutrition can help manage PCOS symptoms. Discover anti-inflammatory foods, insulin-resistant meal plans, and supplements that support hormonal health.",
-    author: "Dr. Nourhan Saleh - Clinical Dietician",
-    date: "December 8, 2024",
-    readTime: "9 min read",
-    category: "Nutrition",
-    icon: Apple,
-    featured: false,
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 7,
-    title: "Heart-Healthy Eating: Mediterranean Diet in Dubai",
-    excerpt: "Adapting the Mediterranean diet for Dubai residents. Learn about heart-healthy foods, portion control, and preventing cardiovascular disease through nutrition.",
-    author: "Dr. Nourhan Saleh - Clinical Dietician",
-    date: "December 6, 2024",
-    readTime: "7 min read",
-    category: "Nutrition",
-    icon: Apple,
-    featured: false,
-    image: "https://images.unsplash.com/photo-1544384380-6e0d4f7b8aba?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 8,
-    title: "Child Nutrition: Healthy Eating Habits for Growing Kids",
-    excerpt: "Essential nutrition guide for children and teenagers. Address picky eating, promote healthy growth, and establish lifelong healthy eating habits in Dubai families.",
-    author: "Dr. Nourhan Saleh - Clinical Dietician",
-    date: "December 4, 2024",
-    readTime: "6 min read",
-    category: "Nutrition",
-    icon: Apple,
-    featured: false,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 9,
-    title: "Laboratory Tests Explained: Blood Work and Beyond",
-    excerpt: "Demystifying common lab tests and what they reveal about your health. From CBC to hormone panels, understand what your results mean.",
-    author: "Dr. Omar Khalil",
-    date: "December 3, 2024",
-    readTime: "8 min read",
-    category: "Laboratory",
-    icon: TestTube,
-    featured: false,
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 10,
-    title: "Nutrition During Ramadan: Healthy Fasting and Iftar Meals",
-    excerpt: "Complete guide to maintaining optimal nutrition during Ramadan. Meal planning for suhoor and iftar, staying hydrated, and managing energy levels while fasting.",
-    author: "Dr. Nourhan Saleh - Clinical Dietician",
-    date: "December 2, 2024",
-    readTime: "9 min read",
-    category: "Nutrition",
-    icon: Apple,
-    featured: false,
-    image: "https://images.unsplash.com/photo-1609501676725-7186f05ba4b8?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 11,
-    title: "Home Healthcare: Bringing Medical Care to Your Doorstep",
-    excerpt: "Discover the convenience and benefits of home healthcare services. From doctor visits to lab collections, medical care has never been more accessible.",
-    author: "Dr. Ahmed Hassan",
-    date: "November 30, 2024",
-    readTime: "4 min read",
-    category: "Home Care",
-    icon: Stethoscope,
-    featured: false,
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&auto=format"
-  },
-  {
-    id: 12,
-    title: "IV Therapy Benefits: Hydration and Vitamin Boost",
-    excerpt: "Learn about the benefits of IV drip therapy for hydration, vitamin supplementation, and wellness. Available both in-clinic and at your home.",
-    author: "Dr. Sarah Ahmed",
-    date: "November 28, 2024",
-    readTime: "5 min read",
-    category: "Wellness",
-    icon: Heart,
-    featured: false,
-    image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=250&fit=crop&auto=format"
-  }
-]
+// ❌ The hardcoded 'const blogPosts = [...]' array has been REMOVED.
 
 const categories = [
   "All Posts",
@@ -197,13 +52,36 @@ const categories = [
   "Sexual Health",
   "Women's Health",
   "Laboratory",
-  "Home Care"
+  "Home Care",
+  "Health Tips", // Added based on categories in BlogEditor/blog-posts.json
+  "Preventive Care", // Added based on categories in blog-posts.json
+  "Medical Technology" // Added based on categories in BlogEditor
 ]
 
-export default function BlogPage() {
+// ✅ Changed to an async function to allow data fetching
+export default async function BlogPage() {
+  
+  // 1. Fetch all posts and process them
+  const allPosts = await getAllBlogPosts();
+
+  // Filter for published posts and sort by publishedAt (newest first)
+  const publishedPosts = allPosts
+    .filter(post => post.status === 'published')
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+
+  // Define featured post as the newest one, and the rest as latest posts
+  const featuredPost = publishedPosts[0] || null;
+  const latestPosts = featuredPost ? publishedPosts.slice(1) : publishedPosts;
+  
+  // Helper function for display date
+  const formatDate = (isoString: string) => {
+    return new Date(isoString).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  };
+
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+      {/* Hero Section (omitted for brevity, no changes needed) */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
@@ -233,7 +111,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Categories Filter */}
+      {/* Categories Filter (omitted for brevity, no changes needed) */}
       <section className="py-8 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
@@ -251,66 +129,71 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Featured Post */}
-      {blogPosts.filter(post => post.featured).map(post => (
-        <section key={post.id} className="py-16 bg-white">
+      {/* Featured Post - RENDER ONLY IF featuredPost EXISTS */}
+      {featuredPost && (
+        <section key={featuredPost.id} className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Featured Article
               </h2>
             </div>
-
-            <Card className="clinical-card overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                <div className="relative h-64 lg:h-full bg-gradient-to-br from-primary/10 to-primary/5">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <post.icon className="w-10 h-10 text-primary" />
+            {/* ✅ Wrap card in Link and use SLUG for navigation */}
+            <Link href={`/blog/${featuredPost.slug}`} className="block">
+              <Card className="clinical-card overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  <div className="relative h-64 lg:h-full bg-gradient-to-br from-primary/10 to-primary/5">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                          {/* 💡 Using Heart as a generic icon, since the JSON doesn't provide a specific icon */}
+                          <Heart className="w-10 h-10 text-primary" /> 
+                        </div>
+                        <p className="text-primary font-medium">Featured Health Article</p>
                       </div>
-                      <p className="text-primary font-medium">Featured Health Article</p>
                     </div>
                   </div>
+                  <CardContent className="p-8 lg:p-12">
+                    <Badge className="mb-4 bg-primary/10 text-primary">{featuredPost.category}</Badge>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                      {featuredPost.title}
+                    </h3>
+                    <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                      {featuredPost.excerpt}
+                    </p>
+
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-center space-x-4 text-sm text-gray-500">
+                        <div className="flex items-center space-x-1">
+                          <User className="w-4 h-4" />
+                          <span>{featuredPost.author}</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Calendar className="w-4 h-4" />
+                          {/* ✅ Use publishedAt and format the date */}
+                          <span>{formatDate(featuredPost.publishedAt)}</span> 
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Clock className="w-4 h-4" />
+                          {/* ✅ Use readingTime from JSON/lib calculation */}
+                          <span>{featuredPost.readingTime} min read</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Button className="bg-primary hover:bg-primary/90 group">
+                      Read Full Article
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </CardContent>
                 </div>
-                <CardContent className="p-8 lg:p-12">
-                  <Badge className="mb-4 bg-primary/10 text-primary">{post.category}</Badge>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <div className="flex items-center space-x-1">
-                        <User className="w-4 h-4" />
-                        <span>{post.author}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{post.date}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{post.readTime}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <Button className="bg-primary hover:bg-primary/90 group">
-                    Read Full Article
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </CardContent>
-              </div>
-            </Card>
+              </Card>
+            </Link>
           </div>
         </section>
-      ))}
+      )}
 
-      {/* Blog Posts Grid */}
+      {/* Blog Posts Grid - Using latestPosts (all non-featured or all if none is featured) */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -323,51 +206,57 @@ export default function BlogPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.filter(post => !post.featured).map((post) => (
-              <Card key={post.id} className="clinical-card h-full hover:scale-[1.02] transition-transform duration-200 group">
-                <div className="relative h-48 bg-gradient-to-br from-primary/10 to-primary/5">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                      <post.icon className="w-6 h-6 text-primary" />
+            {/* ✅ Iterate over latestPosts array */}
+            {latestPosts.map((post) => (
+              <Link href={`/blog/${post.slug}`} key={post.id} className="block"> {/* ✅ Wrap card in Link and use SLUG */}
+                <Card className="clinical-card h-full hover:scale-[1.02] transition-transform duration-200 group">
+                  <div className="relative h-48 bg-gradient-to-br from-primary/10 to-primary/5">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                        {/* 💡 Using Stethoscope as a generic icon, since the JSON doesn't provide a specific icon */}
+                        <Stethoscope className="w-6 h-6 text-primary" /> 
+                      </div>
                     </div>
-                  </div>
-                  <Badge className="absolute top-4 left-4 bg-white/90 text-primary">{post.category}</Badge>
-                </div>
-
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h3>
-
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center space-x-1">
-                      <User className="w-4 h-4" />
-                      <span>{post.author}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{post.readTime}</span>
-                    </div>
+                    <Badge className="absolute top-4 left-4 bg-white/90 text-primary">{post.category}</Badge>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{post.date}</span>
-                    <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 p-0">
-                      Read More <ArrowRight className="ml-1 w-4 h-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                      {post.title}
+                    </h3>
+
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      {post.excerpt}
+                    </p>
+
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center space-x-1">
+                        <User className="w-4 h-4" />
+                        <span>{post.author}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <Clock className="w-4 h-4" />
+                        {/* ✅ Use readingTime from JSON/lib calculation */}
+                        <span>{post.readingTime} min read</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      {/* ✅ Use publishedAt and format the date */}
+                      <span className="text-sm text-gray-500">{formatDate(post.publishedAt)}</span> 
+                      <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 p-0">
+                        Read More <ArrowRight className="ml-1 w-4 h-4" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Newsletter Subscription */}
+      {/* Newsletter Subscription (omitted for brevity, no changes needed) */}
       <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -392,7 +281,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section (omitted for brevity, no changes needed) */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
