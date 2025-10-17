@@ -1,0 +1,100 @@
+# robots.txt for Zain Cura Medical Center
+# Dubai medical clinic with comprehensive healthcare services
+
+User-agent: *
+Allow: /
+
+# Allow all medical content and services
+Allow: /services/
+Allow: /gp-doctor-deira-dubai
+Allow: /gynecologist-dubai-female-doctor
+Allow: /std-testing-dubai-confidential
+Allow: /iv-drip-therapy-dubai-clinic-home
+Allow: /home-gp-consultation-dubai
+Allow: /lab-tests-dubai-home-collection
+Allow: /wellness-health-checks-dubai
+Allow: /home-doctor-dubai-24-7
+Allow: /clinical-dietician-dubai
+Allow: /home-blood-collection-dubai
+Allow: /nurse-on-call-dubai
+Allow: /pediatric-home-care-dubai
+Allow: /emergency-doctor-home-dubai
+Allow: /genetic-testing-dubai
+Allow: /microbiome-testing-dubai
+Allow: /semen-analysis-dubai-fertility
+Allow: /corporate-wellness-dubai
+
+# Allow location and contact pages
+Allow: /location/
+Allow: /contact
+Allow: /about
+Allow: /book
+
+# Allow home care services
+Allow: /home-care
+Allow: /membership
+
+# Allow blog content
+Allow: /blog/
+
+# Allow legal and compliance pages (important for medical SEO)
+Allow: /privacy
+Allow: /hipaa-notice
+Allow: /terms
+Allow: /medical-disclaimer
+
+# Allow verification files
+Allow: /yandex_e542f27b239a0e5a.html
+
+# Disallow admin areas if they exist
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+
+# Disallow temporary or system files
+Disallow: /*.tmp$
+Disallow: /*.temp$
+Disallow: /*.log$
+
+# Allow CSS, JS, and images for proper rendering
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.ico
+
+# Sitemap reference
+Sitemap: https://www.zaincura.com/sitemap.xml
+
+# Medical-specific crawl delay for responsible crawling
+Crawl-delay: 1
+
+# Specific directives for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Social media bots
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
