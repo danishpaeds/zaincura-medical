@@ -1,0 +1,17 @@
+{
+  "id": "",
+  "title": "Your Blog Post Title Here",
+  "slug": "your-blog-post-slug-here",
+  "excerpt": "Write a brief, compelling summary of your blog post here (150-200 characters). This appears in blog listings and search results.",
+  "content": "# Your Main Heading\n\nWrite your engaging introduction paragraph here. Hook the reader and explain what they'll learn from this article.\n\n## First Major Section\n\nStart with important information. Break down complex topics into digestible sections.\n\n### Subsection Title\n\nProvide detailed explanations, examples, or instructions.\n\n**Key Points:**\n- Important point 1 with explanation\n- Important point 2 with details\n- Important point 3 with context\n\n## Second Major Section\n\nContinue building on your topic with additional valuable information.\n\n### Important Details\n\n1. First detailed point\n2. Second detailed point  \n3. Third detailed point\n\n### Practical Tips\n\n- **Tip 1:** Actionable advice here\n- **Tip 2:** More helpful guidance\n- **Tip 3:** Additional recommendations\n\n## When to Seek Medical Help\n\nList warning signs or symptoms that require professional attention:\n\n- Symptom or sign 1\n- Symptom or sign 2\n- Symptom or sign 3\n- Urgent condition indicators\n\n## Conclusion\n\nSummarize key takeaways and provide a clear call to action.\n\n**Ready to take the next step?** Our team at Zain Cura Medical Center is here to help. Book your consultation today for personalized care and expert medical advice.",
+  "featuredImage": "",
+  "category": "Health Tips",
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+  "metaTitle": "Your SEO-Optimized Title (50-60 characters) | Zain Cura Medical Center",
+  "metaDescription": "Write a compelling meta description that includes your main keywords and encourages clicks (150-160 characters).",
+  "author": "Dr. Your Name",
+  "publishedAt": "2025-10-18T10:00:00.000Z",
+  "updatedAt": "2025-10-18T10:00:00.000Z",
+  "status": "draft",
+  "readingTime": 5
+}
