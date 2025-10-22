@@ -198,20 +198,20 @@ export default function HomePage() {
           {/* Premium CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
             <Link href="/book">
-              <Button size="lg" className="bg-gradient-to-r from-white to-cyan-50 text-[#4A9D9C] hover:from-cyan-50 hover:to-white px-12 py-8 text-xl rounded-full shadow-[0_20px_60px_rgba(255,255,255,0.5)] hover:shadow-[0_25px_70px_rgba(255,255,255,0.7)] transition-all duration-300 transform hover:scale-110 font-bold border-4 border-white/30">
+              <Button size="lg" className="bg-gradient-to-r from-white to-cyan-50 text-[#4A9D9C] hover:from-cyan-50 hover:to-white px-12 py-8 text-xl rounded-full shadow-[0_20px_60px_rgba(255,255,255,0.5)] hover:shadow-[0_25px_70px_rgba(255,255,255,0.7)] transition-all duration-300 transform hover:scale-110 font-bold border-4 border-white/30 hover-glow-white">
                 <Calendar className="w-6 h-6 mr-3 animate-pulse" />
                 Book Appointment Now
               </Button>
             </Link>
             <a href="https://wa.me/971523011150?text=Hi%20%F0%9F%91%8B%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20Zain%20Cura%20Medical%20Center.%20Please%20share%20available%20slots%20for%20GP%2C%20Lab%2C%20or%20Home%20Care%20services." target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-12 py-8 text-xl rounded-full shadow-[0_20px_60px_rgba(16,185,129,0.5)] hover:shadow-[0_25px_70px_rgba(16,185,129,0.7)] transition-all duration-300 transform hover:scale-110 font-bold border-4 border-white/30">
+              <Button size="lg" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-12 py-8 text-xl rounded-full shadow-[0_20px_60px_rgba(16,185,129,0.5)] hover:shadow-[0_25px_70px_rgba(16,185,129,0.7)] transition-all duration-300 transform hover:scale-110 font-bold border-4 border-white/30 hover-glow">
                 <MessageCircle className="w-6 h-6 mr-3" />
                 WhatsApp Now
               </Button>
             </a>
             <a href="tel:+97145703423">
-              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-12 py-8 text-xl rounded-full shadow-[0_20px_60px_rgba(59,130,246,0.5)] hover:shadow-[0_25px_70px_rgba(59,130,246,0.7)] transition-all duration-300 transform hover:scale-110 font-bold border-4 border-white/30">
-                <Phone className="w-6 h-6 mr-3" />
+              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-12 py-8 text-xl rounded-full shadow-[0_20px_60px_rgba(59,130,246,0.5)] hover:shadow-[0_25px_70px_rgba(59,130,246,0.7)] transition-all duration-300 transform hover:scale-110 font-bold border-4 border-white/30 animate-pulse-ring hover-glow">
+                <Phone className="w-6 h-6 mr-3 animate-pulse" />
                 Call Now
               </Button>
             </a>
@@ -623,7 +623,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-3 border-white/60 text-white hover:bg-white/20 hover:border-white px-10 py-7 text-lg rounded-full backdrop-blur-md bg-white/10 transition-all duration-300 hover:scale-105 font-semibold shadow-lg"
+                className="border-3 border-white/60 text-white hover:bg-white/20 hover:border-white px-10 py-7 text-lg rounded-full backdrop-blur-md bg-white/10 transition-all duration-300 hover:scale-105 font-semibold shadow-lg hover-glow"
               >
                 <MessageCircle className="w-6 h-6 mr-2" />
                 WhatsApp Now
@@ -633,9 +633,9 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-3 border-white/60 text-white hover:bg-white/20 hover:border-white px-10 py-7 text-lg rounded-full backdrop-blur-md bg-white/10 transition-all duration-300 hover:scale-105 font-semibold shadow-lg"
+                className="border-3 border-white/60 text-white hover:bg-white/20 hover:border-white px-10 py-7 text-lg rounded-full backdrop-blur-md bg-white/10 transition-all duration-300 hover:scale-105 font-semibold shadow-lg animate-pulse-ring hover-glow"
               >
-                <Phone className="w-6 h-6 mr-2" />
+                <Phone className="w-6 h-6 mr-2 animate-pulse" />
                 Call
               </Button>
             </a>

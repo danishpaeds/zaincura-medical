@@ -406,8 +406,8 @@ export default function ServicesHubPage() {
                     <span className="whitespace-nowrap">Book Appointment</span>
                   </Button>
                 </Link>
-                <a href="https://wa.me/971523011150?text=Hi%20I%27d%20like%20to%20learn%20about%20your%20medical%20services" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                  <Button size="lg" className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-7 text-sm sm:text-base md:text-lg rounded-full shadow-[0_20px_60px_rgba(16,185,129,0.4)] hover:shadow-[0_25px_70px_rgba(16,185,129,0.6)] transition-all duration-300 transform hover:scale-105 font-bold border-2 sm:border-3 md:border-4 border-white/20">
+                <a href="https://wa.me/971523011150?text=Hi%20%F0%9F%91%8B%20I%27d%20like%20to%20get%20pricing%20information%20for%20medical%20services%20at%20Zain%20Cura.%20Please%20share%20details%20about%20GP%20consultations%2C%20lab%20tests%2C%20and%20wellness%20packages." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-7 text-sm sm:text-base md:text-lg rounded-full shadow-[0_20px_60px_rgba(16,185,129,0.4)] hover:shadow-[0_25px_70px_rgba(16,185,129,0.6)] transition-all duration-300 transform hover:scale-105 font-bold border-2 sm:border-3 md:border-4 border-white/20 hover-glow">
                     <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2" />
                     <span className="whitespace-nowrap">WhatsApp for Pricing</span>
                   </Button>
@@ -570,7 +570,7 @@ export default function ServicesHubPage() {
 
                       <div className="mt-auto pt-4 border-t border-gray-200">
                         <a
-                          href={`https://wa.me/971523011150?text=Hi, I'd like to learn about ${service.title} services and pricing at Zain Cura Medical Center`}
+                          href={`https://wa.me/971523011150?text=${encodeURIComponent(`Hi! I'd like to learn about ${service.title} services and pricing at Zain Cura Medical Center. Can you share more details?`)}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block mb-3"
@@ -640,7 +640,7 @@ export default function ServicesHubPage() {
 
                       <div className="mt-auto pt-4 border-t border-gray-200">
                         <a
-                          href={`https://wa.me/971523011150?text=Hi, I'd like to learn about ${service.title} services and pricing at Zain Cura Medical Center`}
+                          href={`https://wa.me/971523011150?text=${encodeURIComponent(`Hi! I'd like to learn about ${service.title} services and pricing at Zain Cura Medical Center. Can you share more details?`)}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block"
@@ -712,7 +712,7 @@ export default function ServicesHubPage() {
 
                       <div className="mt-auto pt-4 border-t border-gray-200">
                         <a
-                          href={`https://wa.me/971523011150?text=Hi, I'd like to learn about ${service.title} services and pricing at Zain Cura Medical Center`}
+                          href={`https://wa.me/971523011150?text=${encodeURIComponent(`Hi! I'd like to learn about ${service.title} services and pricing at Zain Cura Medical Center. Can you share more details?`)}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block"
@@ -1005,56 +1005,79 @@ export default function ServicesHubPage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-[#4A9D9C] to-[#3A8D8C] p-10 rounded-3xl shadow-2xl relative overflow-hidden">
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute inset-0" style={{
-                    backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-                    backgroundSize: '30px 30px'
-                  }}></div>
+              <div className="relative bg-gradient-to-br from-[#1A5F5F] via-[#2D7D7D] to-[#4A9D9C] p-8 md:p-10 rounded-3xl shadow-2xl overflow-hidden">
+                {/* Enhanced Background Elements */}
+                <div className="absolute inset-0">
+                  {/* Animated Gradient Orbs */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-cyan-400/20 to-transparent rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-emerald-400/20 to-transparent rounded-full blur-3xl"></div>
+
+                  {/* Dot Pattern */}
+                  <div className="absolute inset-0 opacity-5">
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+                      backgroundSize: '30px 30px'
+                    }}></div>
+                  </div>
                 </div>
 
                 <div className="relative z-10">
-                  <div className="flex items-center gap-2 mb-6">
-                    <Sparkles className="w-5 h-5 text-yellow-300" />
-                    <span className="text-yellow-300 font-semibold text-sm tracking-wide">BOOK NOW</span>
+                  {/* Premium Badge */}
+                  <div className="flex justify-center mb-6">
+                    <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/15 backdrop-blur-md border-2 border-white/30 text-white shadow-lg">
+                      <Sparkles className="w-4 h-4 text-yellow-300" />
+                      <span className="font-bold text-sm tracking-widest">BOOK NOW</span>
+                    </div>
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Book Your Service</h3>
-                  <p className="text-white/90 mb-8 text-lg">
+
+                  <h3 className="text-3xl md:text-4xl font-black text-center text-white mb-4 leading-tight">
+                    Book Your Service
+                  </h3>
+                  <p className="text-center text-white/95 mb-8 text-base md:text-lg font-light leading-relaxed">
                     Choose your preferred booking method - we're available 24/7 to assist you
                   </p>
-                  <div className="space-y-4">
-                    <a href="https://wa.me/971523011150?text=Hi%20I%27d%20like%20to%20book%20a%20medical%20service" target="_blank" rel="noopener noreferrer">
-                      <Button className="w-full bg-white hover:bg-gray-100 text-[#4A9D9C] shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all py-6 text-lg font-bold">
-                        <MessageCircle className="w-5 h-5 mr-3" />
-                        WhatsApp Booking
-                      </Button>
-                    </a>
-                    <a href="tel:+97145703423">
-                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all py-6 text-lg font-bold">
-                        <Phone className="w-5 h-5 mr-3" />
-                        Call Clinic Now
-                      </Button>
-                    </a>
-                    <Link href="/book">
-                      <Button className="w-full bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-[#4A9D9C] shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all py-6 text-lg font-bold">
-                        <Calendar className="w-5 h-5 mr-3" />
-                        Online Booking
-                      </Button>
-                    </Link>
-                  </div>
-                  <div className="mt-8 flex flex-wrap gap-3 justify-center">
-                    <div className="flex items-center gap-2 text-white/90 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-300" />
-                      <span>Walk-ins Welcome</span>
+
+                  {/* Premium Buttons Container */}
+                  <div className="bg-white/10 backdrop-blur-lg border-2 border-white/20 rounded-3xl p-6 mb-6">
+                    <div className="space-y-4">
+                      <a href="https://wa.me/971523011150?text=Hi%20%F0%9F%91%8B%20I%27d%20like%20to%20book%20a%20medical%20service%20at%20Zain%20Cura%20Medical%20Center.%20Please%20share%20available%20appointment%20slots%20for%20GP%2C%20Lab%20Tests%2C%20or%20other%20services." target="_blank" rel="noopener noreferrer">
+                        <Button className="w-full group relative overflow-hidden bg-gradient-to-r from-white via-gray-50 to-white text-[#2D7D7D] hover:from-gray-50 hover:to-white px-6 py-7 text-base md:text-lg font-bold rounded-2xl shadow-[0_15px_40px_rgba(255,255,255,0.3)] hover:shadow-[0_20px_50px_rgba(255,255,255,0.5)] transform hover:scale-105 transition-all duration-300 border-2 border-white/50 hover-glow-white">
+                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-50/50 to-emerald-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          <MessageCircle className="w-5 h-5 mr-3 relative z-10" />
+                          <span className="relative z-10">WhatsApp Booking</span>
+                        </Button>
+                      </a>
+                      <a href="tel:+97145703423">
+                        <Button className="w-full group relative overflow-hidden bg-gradient-to-r from-emerald-500 via-green-500 to-emerald-500 hover:from-emerald-600 hover:to-green-600 text-white px-6 py-7 text-base md:text-lg font-bold rounded-2xl shadow-[0_15px_40px_rgba(16,185,129,0.4)] hover:shadow-[0_20px_50px_rgba(16,185,129,0.6)] transform hover:scale-105 transition-all duration-300 border-2 border-white/30 animate-pulse-ring hover-glow">
+                          <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          <Phone className="w-5 h-5 mr-3 relative z-10 animate-pulse" />
+                          <span className="relative z-10">Call Clinic Now</span>
+                        </Button>
+                      </a>
+                      <Link href="/book">
+                        <Button className="w-full group bg-white/15 backdrop-blur-sm hover:bg-white/25 border-2 border-white/40 hover:border-white/60 text-white px-6 py-7 text-base md:text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 xl:my-[10px]">
+                          <Calendar className="w-5 h-5 mr-3" />
+                          <span>Online Booking</span>
+                        </Button>
+                      </Link>
                     </div>
-                    <div className="flex items-center gap-2 text-white/90 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-300" />
-                      <span>Same-Day Appointments</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-white/90 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-300" />
-                      <span>No Insurance Required</span>
+
+                    {/* Trust Indicators */}
+                    <div className="mt-6 pt-5 border-t border-white/20">
+                      <div className="flex flex-wrap justify-center gap-4 text-white text-xs">
+                        <div className="flex items-center gap-1.5">
+                          <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
+                          <span className="font-medium">Walk-ins Welcome</span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
+                          <span className="font-medium">Same-Day Appointments</span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
+                          <span className="font-medium">No Insurance Required</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1163,38 +1186,130 @@ export default function ServicesHubPage() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-br from-[#4A9D9C] via-[#3A8D8C] to-[#2A7D7C] text-white relative overflow-hidden">
-          {/* Animated Background */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse [animation-delay:1s]"></div>
+        {/* Final CTA - Premium Design */}
+        <section className="py-24 bg-gradient-to-br from-[#1A5F5F] via-[#2D7D7D] to-[#4A9D9C] text-white relative overflow-hidden">
+          {/* Animated Background with Grid Pattern */}
+          <div className="absolute inset-0">
+            {/* Gradient Orbs */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-cyan-400/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-emerald-400/30 to-transparent rounded-full blur-3xl animate-pulse [animation-delay:1s]"></div>
+
+            {/* Geometric Pattern Overlay */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+                backgroundSize: '40px 40px'
+              }}></div>
+            </div>
           </div>
 
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white mb-8">
-              <Sparkles className="w-4 h-4" />
-              <span className="font-medium text-sm">START YOUR HEALTH JOURNEY TODAY</span>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            {/* Premium Badge */}
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/15 backdrop-blur-md border-2 border-white/30 text-white shadow-lg hover:bg-white/20 transition-all">
+                <Sparkles className="w-5 h-5 text-yellow-300" />
+                <span className="font-bold text-sm tracking-widest">PREMIUM HEALTHCARE SERVICES</span>
+                <Award className="w-5 h-5 text-yellow-300" />
+              </div>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-              Ready for Quality Healthcare?
+
+            {/* Main Heading */}
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-center leading-tight">
+              <span className="block mb-2">Ready for Personalized</span>
+              <span className="block bg-gradient-to-r from-white via-cyan-100 to-emerald-100 bg-clip-text text-transparent drop-shadow-2xl">
+                Health Advice?
+              </span>
             </h2>
-            <p className="text-xl md:text-2xl mb-10 text-white/95 max-w-3xl mx-auto leading-relaxed">
-              From routine checkups to specialized testing, we provide comprehensive medical care tailored to your needs. Book your appointment or contact us for immediate assistance.
+
+            {/* Subtitle */}
+            <p className="text-lg sm:text-xl md:text-2xl mb-12 text-center text-white/95 max-w-4xl mx-auto leading-relaxed font-light">
+              Book a consultation with our expert healthcare professionals today and experience world-class medical care
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/971523011150?text=Hi%20I%27d%20like%20to%20learn%20about%20your%20services" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-white text-[#4A9D9C] hover:bg-gray-100 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all px-10 py-7 text-lg font-bold">
-                  <MessageCircle className="w-6 h-6 mr-3" />
-                  WhatsApp Us Now
-                </Button>
-              </a>
-              <Link href="/book">
-                <Button size="lg" className="bg-white/10 backdrop-blur-sm border-3 border-white text-white hover:bg-white hover:text-[#4A9D9C] shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all px-10 py-7 text-lg font-bold">
-                  <Calendar className="w-6 h-6 mr-3" />
-                  Book Appointment
-                </Button>
-              </Link>
+
+            {/* Premium CTA Buttons Container */}
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-lg border-2 border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl">
+                <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-6">
+                  {/* Book Appointment Button - Primary */}
+                  <Link href="/book" className="w-full sm:w-auto">
+                    <Button
+                      size="lg"
+                      className="w-full group relative overflow-hidden bg-gradient-to-r from-white via-gray-50 to-white text-[#2D7D7D] hover:from-gray-50 hover:to-white px-8 md:px-12 py-6 md:py-8 text-base md:text-xl font-bold rounded-2xl shadow-[0_20px_60px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_70px_rgba(255,255,255,0.5)] transform hover:scale-105 transition-all duration-300 border-2 border-white/50 hover-glow-white"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-50/50 to-emerald-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <Calendar className="w-6 h-6 mr-3 relative z-10" />
+                      <span className="relative z-10">Book Appointment</span>
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform relative z-10" />
+                    </Button>
+                  </Link>
+
+                  {/* Call Now Button - Secondary Emphasis */}
+                  <a href="tel:+97145703423" className="w-full sm:w-auto">
+                    <Button
+                      size="lg"
+                      className="w-full group relative overflow-hidden bg-gradient-to-r from-emerald-500 via-green-500 to-emerald-500 hover:from-emerald-600 hover:to-green-600 text-white px-8 md:px-12 py-6 md:py-8 text-base md:text-xl font-bold rounded-2xl shadow-[0_20px_60px_rgba(16,185,129,0.4)] hover:shadow-[0_25px_70px_rgba(16,185,129,0.6)] transform hover:scale-105 transition-all duration-300 border-2 border-white/30 animate-pulse-ring hover-glow"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <Phone className="w-6 h-6 mr-3 relative z-10 animate-pulse" />
+                      <span className="relative z-10">Call Now: +971 4 570 3423</span>
+                    </Button>
+                  </a>
+                </div>
+
+                {/* WhatsApp Option */}
+                <div className="text-center">
+                  <div className="inline-flex items-center gap-2 text-white/80 text-sm mb-4">
+                    <div className="h-px w-12 bg-white/30"></div>
+                    <span className="font-medium">Or contact via</span>
+                    <div className="h-px w-12 bg-white/30"></div>
+                  </div>
+                  <a
+                    href="https://wa.me/971523011150?text=Hi%20%F0%9F%91%8B%20I%27d%20like%20to%20get%20pricing%20information%20for%20your%20medical%20services%20at%20Zain%20Cura%20Medical%20Center.%20Can%20you%20share%20details%20about%20consultation%20fees%2C%20lab%20tests%2C%20and%20packages%3F"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block group"
+                  >
+                    <Button
+                      size="lg"
+                      className="bg-white/15 backdrop-blur-sm hover:bg-white/25 text-white px-8 py-5 text-base md:text-lg font-bold rounded-xl border-2 border-white/30 hover:border-white/50 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+                    >
+                      <MessageCircle className="w-5 h-5 mr-3" />
+                      WhatsApp for Pricing
+                      <span className="ml-2 text-sm opacity-80">+971 52 301 1150</span>
+                    </Button>
+                  </a>
+                </div>
+
+                {/* Trust Indicators */}
+                <div className="mt-8 pt-6 border-t border-white/20">
+                  <div className="flex flex-wrap justify-center gap-6 text-white">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-300" />
+                      <span className="text-sm font-medium">Same-Day Appointments</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-300" />
+                      <span className="text-sm font-medium">DHA Licensed Doctors</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-300" />
+                      <span className="text-sm font-medium">Walk-ins Welcome</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-300" />
+                      <span className="text-sm font-medium">24/7 Available</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div className="text-center mt-8">
+              <p className="text-white/70 text-sm">
+                <MapPin className="w-4 h-4 inline mr-1" />
+                Al Ghurair Centre, 6th Floor, Deira, Dubai • Open 7 Days: 9 AM - 9 PM
+              </p>
             </div>
           </div>
         </section>
